@@ -1,8 +1,7 @@
 ***
 ![image](https://github.com/user-attachments/assets/e9bac288-2be1-4c96-b12c-1172d24b6450)
-Engenharia de Sistemas Informáticos(pós-laboral)
+Engenharia de Sistemas Informáticos(pós-laboral)  2024/25
 
-2024/25
 ***
 
 Programação Orientada a Objetos(POO)
