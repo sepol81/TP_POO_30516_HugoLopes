@@ -7,6 +7,7 @@ namespace EMS.models
     /// </summary>
     public class Event
     {
+        #region Propreties
         /// <summary>
         /// Gets or sets the identifier.
         /// </summary>
@@ -21,7 +22,9 @@ namespace EMS.models
         public string Status { get; set; }
         public List<Person> AssignedPersonnel { get; set; }
         public List<Equipment> AssignedEquipment { get; set; }
+        #endregion
 
+        #region Constructors 
         /// <summary>
         /// Initializes a new instance of the <see cref="Event"/> class.
         /// </summary>
@@ -39,6 +42,7 @@ namespace EMS.models
             SeverityLevel = severityLevel;
             Status = status;
         }
+        #endregion
 
         #region Methods        
         /// <summary>
