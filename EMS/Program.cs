@@ -18,11 +18,11 @@ namespace EMS
                 Id: 1,
                 Name: "Test",
                 CitCard: "3456789",
-                Birthday: new DateTime(1985, 5, 20),
+                Birthday: new DateTime(2024, 7, 21),
                 Age: 39,
                 Email: "fffff@123.com",
                 Phone: "945556954",
-                Address: "123 Main St"
+                Address: "Barcelos"
 
             );
 
