@@ -1,21 +1,21 @@
 ﻿
-/*-----------------------------------------------------------------------------------*
- * Nome do Ficheiro  : FireFighter.cs                                                *
- * Autor             : Hugo Lopes                                                    *
- * Data de Criação   : 26/10/2024                                                    *
- * Descrição         : Defines the Fire-Fighter class, representing a fireFighter   *  
- *                           in the Emergency Managemente System.                    *
- *-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*
+ * Nome do Ficheiro  : Nurse.cs                                          *
+ * Autor             : Hugo Lopes                                        *
+ * Data de Criação   : 26/10/2024                                        *
+ * Descrição         : Defines the Nurse class, representing a nurse     *  
+ *                           in the Emergency Managemente System.        *
+ *-----------------------------------------------------------------------*/
 namespace EMS.models
 {
     /// <summary>
     /// 
     /// </summary>
     /// <seealso cref="EMS.models.Person" />
-    public class FireFighter : Person
+    internal class Nurse : Person
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FireFighter"/> class.
+        /// Initializes a new instance of the <see cref="Nurse"/> class.
         /// </summary>
         /// <param name="Id"></param>
         /// <param name="Name"></param>
@@ -25,9 +25,9 @@ namespace EMS.models
         /// <param name="Email"></param>
         /// <param name="Phone"></param>
         /// <param name="Address"></param>
-        public FireFighter(int Id, string Name, string CitCard, DateTime Birthday, int Age, string Email, string Phone, string Address)
-            : base(Id, Name, CitCard, Birthday, Age, Email, Phone, Address) { }
-       
+        public Nurse(int Id, string Name, string CitCard, DateTime Birthday, int Age, string Email, string Phone, string Address)
+          : base(Id, Name, CitCard, Birthday, Age, Email, Phone, Address) { }
+
         /// <summary>
         /// Abstract method that must be implemented by any subclass.
         /// It defines the type of person (doctor, nurse, firefighter).
@@ -37,7 +37,7 @@ namespace EMS.models
         /// </returns>
         public override string TypePerson()
         {
-            return  $"FireFighter\n"+
+            return  $"Nurse\n"+
                     $"ID: {Id}\n" +
                     $"Name: {Name}\n" +
                     $"CitCard: {CitCard} \n" +
@@ -48,6 +48,5 @@ namespace EMS.models
                     $"Address: {Address}  \n";
         }
 
-        
     }
 }
