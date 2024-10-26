@@ -9,11 +9,12 @@
 namespace EMS.models
 {
     /// <summary>
-    /// 
+    /// Represents a firefighter in the emergency response system.
     /// </summary>
     /// <seealso cref="EMS.models.Person" />
     public class FireFighter : Person
     {
+        #region Constructors
         /// <summary>
         /// Initializes a new instance of the <see cref="FireFighter"/> class.
         /// </summary>
@@ -25,9 +26,11 @@ namespace EMS.models
         /// <param name="Email"></param>
         /// <param name="Phone"></param>
         /// <param name="Address"></param>
-        public FireFighter(int Id, string Name, string CitCard, DateTime Birthday, int Age, string Email, string Phone, string Address)
-            : base(Id, Name, CitCard, Birthday, Age, Email, Phone, Address) { }
-       
+        public FireFighter(int Id, string Name, string CitCard,string Status, DateTime Birthday, int Age, string Email, string Phone, string Address)
+            : base(Id, Name, CitCard, Status, Birthday, Age, Email, Phone, Address) { }
+        #endregion
+
+        #region Methods
         /// <summary>
         /// Abstract method that must be implemented by any subclass.
         /// It defines the type of person (doctor, nurse, firefighter).
@@ -48,6 +51,6 @@ namespace EMS.models
                     $"Address: {Address}  \n";
         }
 
-        
+        #endregion
     }
 }

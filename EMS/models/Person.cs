@@ -5,7 +5,8 @@
 namespace EMS.models
 {
     /// <summary>
-    /// 
+    /// Represents a generic person with common properties shared by all individuals in the system, 
+    /// such as ID, name, contact details, and other identifying information.
     /// </summary>
     public abstract class Person
     {
@@ -13,11 +14,13 @@ namespace EMS.models
         private int id { get; set; }
         private string name { get; set; }
         private string citCard { get; set; }
+        private string status { get; set; }
         private DateTime birthday { get; set; }
         private int age { get; set; }
         private string email { get; set; }
         private string phone { get; set; }
         private string address { get; set; }
+
 
 
 
@@ -45,6 +48,11 @@ namespace EMS.models
         {
             get => citCard;
             set => citCard = value;
+        }
+        public string Status
+        {
+            get=> status;
+            set => status = value;
         }
 
         public DateTime Birthday
@@ -92,11 +100,12 @@ namespace EMS.models
         /// <param name="phone">The phone.</param>
         /// <param name="address">The address.</param>
         /// 
-        public Person(int id, string name, string citCard, DateTime birthday, int age, string email, string phone, string address)
+        public Person(int id, string name, string citCard, string status, DateTime birthday, int age, string email, string phone, string address)
         {
             this.Id = id;
             this.Name = name;
             this.CitCard = citCard;
+            this.Status = status;
             this.Birthday = birthday;
             this.Age = age;
             this.Email = email;
