@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="enums\" />
+    <Folder Include="enum\" />
+    <Folder Include="interface\" />
     <Folder Include="common\" />
   </ItemGroup>
 

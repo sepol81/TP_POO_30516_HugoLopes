@@ -3,23 +3,24 @@
 Engenharia de Sistemas Informáticos(pós-laboral)  2024/25
 
 ***
+Trabalho Prático
 
 Programação Orientada a Objetos(POO)
-    
+   
 Hugo Lopes
 
 Aluno n.º 30516
-     
+
+    
           
-         
           Emergency Services Management(C#) 
          
-             System that allows recording occurrences of requests for help
+             System that allows recording occurrences of requests for help 
              and manage equipment and people to provide assistance.
              
      
      
         
-  
+   
 Professor: Ernesto Casanova
 ***

@@ -83,18 +83,20 @@ namespace EMS.models
 
         #endregion
 
-        #region Constructors         
+        #region Constructors 
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="Person"/> class.
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <param name="name">The name.</param>
-        /// <param name="citCard">The cart cid.</param>
+        /// <param name="citCard">The cit card.</param>
         /// <param name="birthday">The birthday.</param>
         /// <param name="age">The age.</param>
         /// <param name="email">The email.</param>
         /// <param name="phone">The phone.</param>
         /// <param name="address">The address.</param>
+        /// 
         public Person(int id, string name, string citCard, DateTime birthday, int age, string email, string phone, string address)
         {
             this.Id = id;
