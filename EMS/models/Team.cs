@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace EMS.models
 {
-    public class INEM
+    internal class Team
     {
-
     }
 }

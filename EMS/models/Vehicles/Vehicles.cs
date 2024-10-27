@@ -1,7 +1,6 @@
-﻿
-namespace EMS.models
+﻿namespace EMS.models.Vehicles
 {
-    public abstract class Vehicles
+    public abstract class Vehicle
     {
         #region Private Properties        
         /// <summary>
@@ -10,7 +9,7 @@ namespace EMS.models
         /// <value>
         /// The car regist.
         /// </value>
-        private string carRegist {  get; set; }
+        private string carRegist { get; set; }
         private string type { get; set; }
         private string brand { get; set; }
         private DateTime inspDate { get; set; }
@@ -24,24 +23,24 @@ namespace EMS.models
         /// <value>
         /// The car regist.
         /// </value>
-        public string CarRegist 
-        { 
+        public string CarRegist
+        {
             get => carRegist;
-            set => carRegist = value; 
+            set => carRegist = value;
         }
-        public string Type 
-        {  
+        public string Type
+        {
             get => type;
             set => type = value;
         }
-        public string Brand 
+        public string Brand
         {
             get => brand;
             set => brand = value;
         }
         public DateTime InspDate
         {
-            get=> inspDate; 
+            get => inspDate;
             set => inspDate = value;
         }
         public string Status
@@ -60,7 +59,7 @@ namespace EMS.models
         /// <param name="brand">The brand.</param>
         /// <param name="inspDate">The insp date.</param>
         /// <param name="status">The status.</param>
-        public Vehicles(string carRegist, string type, string brand, DateTime inspDate,string status)
+        public Vehicle(string carRegist, string type, string brand, DateTime inspDate, string status)
         {
             this.carRegist = carRegist;
             this.type = type;
@@ -75,7 +74,7 @@ namespace EMS.models
         /// Types the vehicles.
         /// </summary>
         /// <returns></returns>
-        public abstract Vehicles TypeVehicles();
+        public abstract string TypeVehicles();
         #endregion
     }
 }

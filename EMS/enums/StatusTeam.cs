@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EMS.models
+namespace EMS.enums
 {
-    public class INEM
+    internal class StatusTeam
     {
-
     }
 }

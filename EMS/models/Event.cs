@@ -1,5 +1,7 @@
 ﻿
 
+using EMS.models.Persons;
+
 namespace EMS.models
 {
     /// <summary>
@@ -20,6 +22,7 @@ namespace EMS.models
         public string Description { get; set; }
         public string SeverityLevel {  get; set; }  
         public string Status { get; set; }
+        public string Vehicle {  get; set; }
         public List<Person> AssignedPersonnel { get; set; }
         public List<Equipment> AssignedEquipment { get; set; }
         #endregion
@@ -33,7 +36,7 @@ namespace EMS.models
         /// <param name="description">The description.</param>
         /// <param name="severityLevel">The severity level.</param>
         /// <param name="status">The status.</param>
-        public Event(int id, string type ,string description, string severityLevel, string status)
+        public Event(int id, string type ,string description, string severityLevel, string status,string vehicle)
         {
             Id = id;
             Type = type;
@@ -41,6 +44,7 @@ namespace EMS.models
             Description = description;
             SeverityLevel = severityLevel;
             Status = status;
+            Vehicle = vehicle;
         }
         #endregion
 

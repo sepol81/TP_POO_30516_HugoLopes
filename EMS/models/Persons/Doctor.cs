@@ -1,22 +1,22 @@
-﻿
-/*-----------------------------------------------------------------------*
- * Nome do Ficheiro  : Nurse.cs                                          *
+﻿/*-----------------------------------------------------------------------*
+ * Nome do Ficheiro  : Doctor.cs                                         *
  * Autor             : Hugo Lopes                                        *
  * Data de Criação   : 26/10/2024                                        *
- * Descrição         : Defines the Nurse class, representing a nurse     *  
+ * Descrição         : Defines the Doctor class, representing a doctor   *  
  *                           in the Emergency Managemente System.        *
  *-----------------------------------------------------------------------*/
-namespace EMS.models
+
+namespace EMS.models.Persons
 {
     /// <summary>
-    /// Represents a nurse in the emergency response system.
+    /// Represents a doctor in the emergency response system.
     /// </summary>
-    /// <seealso cref="EMS.models.Person" />
-    public class Nurse : Person
+    /// <seealso cref="Person" />
+    public class Doctor : Person
     {
         #region Constructors
         /// <summary>
-        /// Initializes a new instance of the <see cref="Nurse"/> class.
+        /// Initializes a new instance of the <see cref="Doctor"/> class.
         /// </summary>
         /// <param name="Id"></param>
         /// <param name="Name"></param>
@@ -26,12 +26,12 @@ namespace EMS.models
         /// <param name="Email"></param>
         /// <param name="Phone"></param>
         /// <param name="Address"></param>
-        public Nurse(int Id, string Name, string CitCard,string Status, DateTime Birthday, int Age, string Email, string Phone, string Address)
-          : base(Id, Name, CitCard,Status, Birthday, Age, Email, Phone, Address) { }
+        public Doctor(int Id, string Name, string CitCard, string Status, DateTime Birthday, int Age, string Email, string Phone, string Address)
+           : base(Id, Name, CitCard, Status, Birthday, Age, Email, Phone, Address) { }
         #endregion
 
 
-        #region Methods
+        #region Methods       
         /// <summary>
         /// Abstract method that must be implemented by any subclass.
         /// It defines the type of person (doctor, nurse, firefighter).
@@ -41,7 +41,7 @@ namespace EMS.models
         /// </returns>
         public override string TypePerson()
         {
-            return  $"Nurse\n"+
+            return $"Doctor\n" +
                     $"ID: {Id}\n" +
                     $"Name: {Name}\n" +
                     $"CitCard: {CitCard} \n" +
@@ -51,6 +51,8 @@ namespace EMS.models
                     $"Phone: {Phone}  \n" +
                     $"Address: {Address}  \n";
         }
+
         #endregion
     }
 }
+

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EMS.models
+namespace EMS.models.Vehicles
 {
-    public class Ambulance
+    public class Helicopter
     {
     }
 }

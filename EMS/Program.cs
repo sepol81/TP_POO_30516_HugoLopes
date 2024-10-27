@@ -1,4 +1,4 @@
-﻿using EMS.models;
+﻿using EMS.models.Persons;
 using System;
 
 
@@ -19,13 +19,16 @@ namespace EMS
                 Id: 1,
                 Name: "Test1",
                 CitCard: "3456789",
-                Status: "",
+                Status: "operacional",
                 Birthday: new DateTime(2024, 7, 21),
                 Age: 39,
                 Email: "fffff@123.com",
                 Phone: "945556954",
-                Address: "Barcelos"
-
+                Address: "Barcelos",
+                Rank: "Chief",
+                YearsOfExp: 2,
+                Certifications: new List<string> { "Certificação de Resgate", "Primeiros Socorros" },
+                Skills: new List<string> { "Combate a Incêndios", "Salvamento em Altura" }
             );
 
             Console.WriteLine(fireFighter.TypePerson());

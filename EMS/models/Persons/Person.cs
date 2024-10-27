@@ -1,8 +1,4 @@
-﻿
-
-
-
-namespace EMS.models
+﻿namespace EMS.models.Persons
 {
     /// <summary>
     /// Represents a generic person with common properties shared by all individuals in the system, 
@@ -51,7 +47,7 @@ namespace EMS.models
         }
         public string Status
         {
-            get=> status;
+            get => status;
             set => status = value;
         }
 
@@ -87,7 +83,7 @@ namespace EMS.models
         #endregion
 
         #region Constructors 
-        
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Person"/> class.
         /// </summary>
@@ -102,21 +98,21 @@ namespace EMS.models
         /// 
         public Person(int id, string name, string citCard, string status, DateTime birthday, int age, string email, string phone, string address)
         {
-            this.Id = id;
-            this.Name = name;
-            this.CitCard = citCard;
-            this.Status = status;
-            this.Birthday = birthday;
-            this.Age = age;
-            this.Email = email;
-            this.Phone = phone;
-            this.Address = address;
+            Id = id;
+            Name = name;
+            CitCard = citCard;
+            Status = status;
+            Birthday = birthday;
+            Age = age;
+            Email = email;
+            Phone = phone;
+            Address = address;
 
         }
 
 
-        #endregion  
-        
+        #endregion
+
         #region Abstract Method
         /// <summary>
         /// Abstract method that must be implemented by any subclass.
