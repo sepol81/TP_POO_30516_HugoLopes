@@ -32,7 +32,7 @@ namespace EMS.models
         #endregion
 
 
-        #region Methods
+        #region Methods       
         /// <summary>
         /// Abstract method that must be implemented by any subclass.
         /// It defines the type of person (doctor, nurse, firefighter).

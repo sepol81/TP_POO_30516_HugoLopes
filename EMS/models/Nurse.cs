@@ -12,7 +12,7 @@ namespace EMS.models
     /// Represents a nurse in the emergency response system.
     /// </summary>
     /// <seealso cref="EMS.models.Person" />
-    internal class Nurse : Person
+    public class Nurse : Person
     {
         #region Constructors
         /// <summary>
