@@ -2,8 +2,11 @@
 
 namespace EMS.enums
 {
-    internal class StatusEvent
+    public enum StatusEvent
         {
+        EmEspera,
+        EmProgresso,
+        Concluída
 
         }   
 

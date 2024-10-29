@@ -49,41 +49,7 @@ namespace EMS.models
         #endregion
 
         #region Methods        
-        /// <summary>
-        /// Updates the status.
-        /// </summary>
-        /// <param name="newStatus">The new status.</param>
-        public void UpdateStatus(string newStatus)
-        {
-            Status = newStatus;
-        }
-
-        /// <summary>
-        /// Updats the severity level.
-        /// </summary>
-        /// <param name="newSeverityLevel">The new severity level.</param>
-        public void UpdatDeverityLevel(string newSeverityLevel)
-        {
-            SeverityLevel = newSeverityLevel;
-        }
-
-        /// <summary>
-        /// Assigns the person.
-        /// </summary>
-        /// <param name="person">The person.</param>
-        public void AssignPerson(Person person)
-        {
-            AssignedPersonnel.Add(person);
-        }
-
-        /// <summary>
-        /// Assignequipments the specified equipment.
-        /// </summary>
-        /// <param name="equipment">The equipment.</param>
-        public void Assignequipment(Equipment equipment)
-        {
-            AssignedEquipment.Add(equipment);
-        }
+       
         #endregion
     }
 }

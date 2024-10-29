@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace EMS.enums
 {
-    internal class EventSeverityLevel
+    public enum EventSeverityLevel
     {
+        Leve,
+        Moderada,
+        Séria,
+        severa,
+        Critica
     }
 }

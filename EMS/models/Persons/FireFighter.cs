@@ -5,6 +5,7 @@
  * Descrição         : Defines the Fire-Fighter class, representing a fireFighter   *  
  *                           in the Emergency Managemente System.                    *
  *-----------------------------------------------------------------------------------*/
+using EMS.enums;
 namespace EMS.models.Persons
 {
     /// <summary>
@@ -15,7 +16,7 @@ namespace EMS.models.Persons
     public class FireFighter : Person
     {
         #region Properties
-        public string Rank { get; set; }
+        public RankFireFighter Rank { get; set; }
         public int YearsOfExp { get; set; }
         public List<string> Certifications { get; set; }
         public List<string> Skills { get; set; }
@@ -29,6 +30,7 @@ namespace EMS.models.Persons
         /// <param name="Id">The identifier.</param>
         /// <param name="Name">The name.</param>
         /// <param name="CitCard">The cit card.</param>
+        /// <param name="Profession">The profession.</param>
         /// <param name="Status">The status.</param>
         /// <param name="Birthday">The birthday.</param>
         /// <param name="Age">The age.</param>
@@ -39,9 +41,9 @@ namespace EMS.models.Persons
         /// <param name="YearsOfExp">The years of exp.</param>
         /// <param name="Certifications">The certifications.</param>
         /// <param name="Skills">The skills.</param>
-        public FireFighter(int Id, string Name, string CitCard, string Status, DateTime Birthday, int Age, string Email, string Phone, string Address,
-            string Rank, int YearsOfExp, List<string> Certifications, List<string> Skills)
-            : base(Id, Name, CitCard, Status, Birthday, Age, Email, Phone, Address)
+        public FireFighter(int Id, string Name, string CitCard,Profession Profession, StatusPerson Status, DateOnly Birthday, int Age, string Email, string Phone, string Address,
+            RankFireFighter Rank, int YearsOfExp, List<string> Certifications, List<string> Skills)
+            : base(Id, Name, CitCard, Profession, Status, Birthday, Age, Email, Phone, Address)
         {
             this.Rank = Rank;
             this.YearsOfExp = YearsOfExp;
@@ -61,10 +63,10 @@ namespace EMS.models.Persons
         /// </returns>
         public override string TypePerson()
         {
-            return $"FireFighter\n" +
-                    $"ID: {Id}\n" +
+            return  $"ID: {Id}\n" +
                     $"Name: {Name}\n" +
                     $"CitCard: {CitCard} \n" +
+                    $"Profession: {Profession} \n" +
                     $"Status: {Status}\n" +
                     $"Birthday: {Birthday} \n" +
                     $"Age: {Age} \n" +

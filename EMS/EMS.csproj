@@ -12,4 +12,8 @@
     <Folder Include="common\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.csproj" />
+  </ItemGroup>
+
 </Project>

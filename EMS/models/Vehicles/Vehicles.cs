@@ -1,7 +1,14 @@
-﻿namespace EMS.models.Vehicles
+﻿using EMS.enums;
+using Utils;
+
+namespace EMS.models.Vehicles
 {
     public abstract class Vehicle
     {
+        /// <summary>
+        /// The age calculator
+        /// </summary>
+        private readonly CalAge.Date ageCalculator = new CalAge.Date();
         #region Private Properties        
         /// <summary>
         /// Gets or sets the car regist.
@@ -10,10 +17,11 @@
         /// The car regist.
         /// </value>
         private string carRegist { get; set; }
-        private string type { get; set; }
+        private DateOnly yearOfRegist { get; set; }
+        private TypeVehicle type { get; set; }
         private string brand { get; set; }
-        private DateTime inspDate { get; set; }
-        private string status { get; set; }
+        private DateOnly inspDate { get; set; }
+        private StatusVehicle status { get; set; }
         #endregion
 
         #region Public Properties        
@@ -28,7 +36,13 @@
             get => carRegist;
             set => carRegist = value;
         }
-        public string Type
+        public DateOnly YearOfRegist
+        {
+            get => yearOfRegist;
+            set => yearOfRegist = value;
+        }
+        public int Age => ageCalculator.Age(YearOfRegist);
+        public TypeVehicle Type
         {
             get => type;
             set => type = value;
@@ -38,34 +52,36 @@
             get => brand;
             set => brand = value;
         }
-        public DateTime InspDate
+        public DateOnly InspDate
         {
             get => inspDate;
             set => inspDate = value;
         }
-        public string Status
+        public StatusVehicle Status
         {
             get => status;
             set => status = value;
         }
         #endregion
 
-        #region Constructors        
+        #region Constructors               
         /// <summary>
-        /// Initializes a new instance of the <see cref="Vehicles"/> class.
+        /// Initializes a new instance of the <see cref="Vehicle"/> class.
         /// </summary>
-        /// <param name="carRegist">The car regist.</param>
-        /// <param name="type">The type.</param>
-        /// <param name="brand">The brand.</param>
-        /// <param name="inspDate">The insp date.</param>
-        /// <param name="status">The status.</param>
-        public Vehicle(string carRegist, string type, string brand, DateTime inspDate, string status)
+        /// <param name="CarRegist">The car regist.</param>
+        /// <param name="Type">The type.</param>
+        /// <param name="Brand">The brand.</param>
+        /// <param name="InspDate">The insp date.</param>
+        /// <param name="Status">The status.</param>
+        public Vehicle(string carRegist,DateOnly yearOfRegist,int Age, TypeVehicle type, string brand, DateOnly inspDate, StatusVehicle status)
         {
-            this.carRegist = carRegist;
-            this.type = type;
-            this.brand = brand;
-            this.inspDate = inspDate;
-            this.status = status;
+            CarRegist = carRegist;
+            YearOfRegist=yearOfRegist;
+            Age = Age;
+            Type = type;
+            Brand = brand;
+            InspDate = inspDate;
+            Status = status;
         }
         #endregion
 
