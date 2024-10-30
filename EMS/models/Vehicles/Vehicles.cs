@@ -10,12 +10,6 @@ namespace EMS.models.Vehicles
         /// </summary>
         private readonly CalAge.Date ageCalculator = new CalAge.Date();
         #region Private Properties        
-        /// <summary>
-        /// Gets or sets the car regist.
-        /// </summary>
-        /// <value>
-        /// The car regist.
-        /// </value>
         private string carRegist { get; set; }
         private DateOnly yearOfRegist { get; set; }
         private TypeVehicle type { get; set; }
@@ -64,15 +58,17 @@ namespace EMS.models.Vehicles
         }
         #endregion
 
-        #region Constructors               
+        #region Constructors                      
         /// <summary>
         /// Initializes a new instance of the <see cref="Vehicle"/> class.
         /// </summary>
-        /// <param name="CarRegist">The car regist.</param>
-        /// <param name="Type">The type.</param>
-        /// <param name="Brand">The brand.</param>
-        /// <param name="InspDate">The insp date.</param>
-        /// <param name="Status">The status.</param>
+        /// <param name="carRegist">The car regist.</param>
+        /// <param name="yearOfRegist">The year of regist.</param>
+        /// <param name="Age">The age.</param>
+        /// <param name="type">The type.</param>
+        /// <param name="brand">The brand.</param>
+        /// <param name="inspDate">The insp date.</param>
+        /// <param name="status">The status.</param>
         public Vehicle(string carRegist,DateOnly yearOfRegist,int Age, TypeVehicle type, string brand, DateOnly inspDate, StatusVehicle status)
         {
             CarRegist = carRegist;
@@ -85,11 +81,14 @@ namespace EMS.models.Vehicles
         }
         #endregion
 
-        #region Abstract Method        
+        #region Abstract Method
+
+     
         /// <summary>
-        /// Types the vehicles.
+        /// Abstract method that must be implemented by any subclass.
+        /// It defines the type of Vehicle.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A string representing the specific type of vehicle.</returns>
         public abstract string TypeVehicles();
         #endregion
     }

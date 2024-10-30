@@ -19,7 +19,7 @@ namespace EMS
             FireFighter fireFighter = new FireFighter
             (
                 Id: 1,
-                Name: "Test1",
+                Name: "João",
                 CitCard: "3456789",
                 Profession: Profession.Bombeiro,
                 Status: StatusPerson.EmServiço,
@@ -41,7 +41,7 @@ namespace EMS
             Doctor doctor = new Doctor
             (
                 Id: 1,
-                Name: "Test2",
+                Name: "António",
                 CitCard: "865987",
                 Profession: Profession.Medico,
                 Status: StatusPerson.Disponivel,
@@ -60,7 +60,7 @@ namespace EMS
             Nurse nurse = new Nurse
            (
                Id: 1,
-               Name: "Test3",
+               Name: "Maria",
                CitCard: "1258995",
                Profession: Profession.Enfermeiro,
                Birthday: new DateOnly(1994, 7, 23),
@@ -75,19 +75,53 @@ namespace EMS
             Console.WriteLine(nurse.TypePerson());
             #endregion
 
+            #region Create Paramedic Object
+            Paramedic paramedic = new Paramedic
+           (
+               Id: 1,
+               Name: "Silva",
+               CitCard: "1285545",
+               Profession: Profession.Paramédico,
+               Birthday: new DateOnly(1993, 7, 23),
+               Status: StatusPerson.Disponivel,
+               Age: 0,
+               Email: "pppp@123.com",
+               Phone: "023654985",
+               Address: "Évora"
+
+           );
+
+            Console.WriteLine(paramedic.TypePerson());
+            #endregion
+
             FireTruck fireTruck = new FireTruck
                 (
                     CarRegist: "23-WE-34",
                     YearOfRegist: new DateOnly(1970, 6, 26),
-                    Age:0 ,
+                    Age: 0,
                     Type: TypeVehicle.FireTruck,
                     Brand: "Mercedes",
                     InspDate: new DateOnly(2024, 12, 30),
                     Status: StatusVehicle.EmManutenção,
-                    WaterTankCapacity: 3
+                    WaterTankCapacity: 3000
                  );
 
-            Console.WriteLine(fireTruck.TypeVehicles());
+                Console.WriteLine(fireTruck.TypeVehicles());
+
+
+            Ambulance ambulance = new Ambulance
+               (
+                   CarRegist: "25-PO-33",
+                   YearOfRegist: new DateOnly(1980, 6, 26),
+                   Age: 0,
+                   Type: TypeVehicle.Ambulence,
+                   Brand: "Renault",
+                   InspDate: new DateOnly(2024, 12, 30),
+                   Status: StatusVehicle.EmServiço
+
+                );
+
+                Console.WriteLine(ambulance.TypeVehicles());
 
         }
               

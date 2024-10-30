@@ -8,6 +8,9 @@ namespace EMS.models.Persons
     /// </summary>
     public abstract class Person
     {
+        /// <summary>
+        /// The age calculator
+        /// </summary>
         private readonly CalAge.Date ageCalculator = new CalAge.Date();
 
         #region Private Properties
@@ -99,7 +102,7 @@ namespace EMS.models.Persons
         /// <param name="profession">The profession.</param>
         /// <param name="status">The status.</param>
         /// <param name="birthday">The birthday.</param>
-        /// <param name="age">The age.</param>
+        /// <param name="Age">The age.</param>
         /// <param name="email">The email.</param>
         /// <param name="phone">The phone.</param>
         /// <param name="address">The address.</param>

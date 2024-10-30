@@ -2,6 +2,9 @@
 
 namespace EMS.enums
 {
+    /// <summary>
+    /// Enumerates the ranck of Firefiggter
+    /// </summary>
     public enum RankFireFighter
     {
         Comandante,

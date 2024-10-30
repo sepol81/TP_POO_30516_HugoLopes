@@ -1,19 +1,10 @@
-﻿/*-----------------------------------------------------------------------*
- * Nome do Ficheiro  : Nurse.cs                                          *
- * Autor             : Hugo Lopes                                        *
- * Data de Criação   : 26/10/2024                                        *
- * Descrição         : Defines the Nurse class, representing a nurse     *  
- *                           in the Emergency Managemente System.        *
- *-----------------------------------------------------------------------*/
+﻿
 
 using EMS.enums;
+
 namespace EMS.models.Persons
 {
-    /// <summary>
-    /// Represents a nurse in the emergency response system.
-    /// </summary>
-    /// <seealso cref="Person" />
-    public class Nurse : Person
+    public class Paramedic : Person
     {
         #region Constructors              
         /// <summary>
@@ -29,7 +20,7 @@ namespace EMS.models.Persons
         /// <param name="Email"></param>
         /// <param name="Phone"></param>
         /// <param name="Address"></param>
-        public Nurse(int Id, string Name, string CitCard,Profession Profession, StatusPerson Status, DateOnly Birthday, int Age, string Email, string Phone, string Address)
+        public Paramedic(int Id, string Name, string CitCard, Profession Profession, StatusPerson Status, DateOnly Birthday, int Age, string Email, string Phone, string Address)
           : base(Id, Name, CitCard, Profession, Status, Birthday, Age, Email, Phone, Address) { }
         #endregion
 
@@ -44,11 +35,11 @@ namespace EMS.models.Persons
         /// </returns>
         public override string TypePerson()
         {
-            return  $"ID: {Id}\n" +
+            return $"ID: {Id}\n" +
                     $"Name: {Name}\n" +
                     $"CitCard: {CitCard} \n" +
-                    $"Profession: {Profession}\n"+
-                    $"Status: {Status}\n"+
+                    $"Profession: {Profession}\n" +
+                    $"Status: {Status}\n" +
                     $"Birthday: {Birthday} \n" +
                     $"Age: {Age} \n" +
                     $"Email: {Email} \n" +
@@ -58,3 +49,4 @@ namespace EMS.models.Persons
         #endregion
     }
 }
+

@@ -18,7 +18,7 @@ namespace EMS.models
         public string Name { get; set; }
         public string Description { get; set; }
         public int Quantity { get; set; }
-        public DateTime MaintenanceDate { get;set;}
+        public DateTime MaintenanceDate { get; set; }
         public string Status { get; set; }
 
 
@@ -34,7 +34,7 @@ namespace EMS.models
         /// <param name="quantity">The quantity.</param>
         /// <param name="maintenanceDate">The maintenance date.</param>
         /// <param name="status">The status.</param>
-        public Equipment (int id, string name, string description, int quantity, DateTime maintenanceDate, string status) 
+        public Equipment(int id, string name, string description, int quantity, DateTime maintenanceDate, string status)
         {
             Id = id;
             Name = name;
@@ -46,25 +46,6 @@ namespace EMS.models
         }
 
         #endregion
-        #region Methods        
-        /// <summary>
-        /// Updates the status.
-        /// </summary>
-        /// <param name="newStatus">The new status.</param>
-        public void UpdateStatus(string newStatus)
-        {
-            Status = newStatus;
-        }
 
-        /// <summary>
-        /// Needses the maintenance.
-        /// </summary>
-        /// <returns></returns>
-        public bool NeedsMaintenance()
-        {
-            return (DateTime.Now - MaintenanceDate).Days > 180;// maintenance every 6 months
-        }
-
-        #endregion
     }
 }

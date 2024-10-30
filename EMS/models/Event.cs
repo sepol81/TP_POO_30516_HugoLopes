@@ -1,4 +1,4 @@
-﻿
+﻿using EMS.models.Vehicles;
 
 using EMS.models.Persons;
 
@@ -22,7 +22,7 @@ namespace EMS.models
         public string Description { get; set; }
         public string SeverityLevel {  get; set; }  
         public string Status { get; set; }
-        public string Vehicle {  get; set; }
+        public List<Vehicle> AssingnedVehicle{  get; set; }
         public List<Person> AssignedPersonnel { get; set; }
         public List<Equipment> AssignedEquipment { get; set; }
         #endregion
@@ -40,11 +40,10 @@ namespace EMS.models
         {
             Id = id;
             Type = type;
-
             Description = description;
             SeverityLevel = severityLevel;
             Status = status;
-            Vehicle = vehicle;
+           
         }
         #endregion
 
