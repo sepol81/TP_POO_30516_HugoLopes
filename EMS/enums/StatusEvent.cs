@@ -11,7 +11,8 @@ namespace EMS.enums
         {
         EmEspera,
         EmProgresso,
-        Concluída
+        Concluída,
+        Other
 
         }   
 

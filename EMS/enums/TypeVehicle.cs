@@ -10,6 +10,11 @@ namespace EMS.enums
         FireTruck,
         Ambulence,
         Motorbike,
-        Helicopter
+        Helicopter,
+        Ambulence_INEM,
+        Motorbike_INEM,
+        Helicopter_INEM,
+
+        Other
     }
 }

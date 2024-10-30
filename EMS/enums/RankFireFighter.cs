@@ -15,6 +15,7 @@ namespace EMS.enums
         BombeiroDe1º,
         BombeiroDe2º,
         BombeiroDe3º,
-        Estagiário
+        Estagiário,
+        Other
     }
 }

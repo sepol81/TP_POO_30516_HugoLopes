@@ -1,6 +1,4 @@
-﻿
-
-namespace EMS.models
+﻿namespace EMS.models.Equiments
 {
     #region Propreties    
     /// <summary>

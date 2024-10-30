@@ -9,6 +9,7 @@ namespace EMS.enums
     {
         Disponivel,
         EmServiço,
-        EmDescanso
+        EmDescanso,
+        Other
     }
 }

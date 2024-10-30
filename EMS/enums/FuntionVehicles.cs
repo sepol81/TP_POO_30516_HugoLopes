@@ -34,7 +34,8 @@ namespace EMS.enums
 	 Veículo_Urbano_de_Combate_a_Incêndios_VUCI,
 	 Veículo_Rural_de_Combate_a_Incêndios_VRCI,
 	 Veículo_Florestalde_Combate_a_Incêndios_VFCI,
-	 Veículo_LigeirodeCombateaIncêndios_VLCI
+	 Veículo_LigeirodeCombateaIncêndios_VLCI,
+	 Other
 
     }
 }

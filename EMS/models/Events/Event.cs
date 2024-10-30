@@ -1,13 +1,13 @@
 ﻿using EMS.models.Vehicles;
-
 using EMS.models.Persons;
+using EMS.models.Equiments;
 
-namespace EMS.models
+namespace EMS.models.Events
 {
     /// <summary>
     /// Represents an emergency event or occurrence. 
     /// </summary>
-    public class Event
+    public abstract class Event
     {
         #region Propreties
         /// <summary>
@@ -16,15 +16,19 @@ namespace EMS.models
         /// <value>
         /// The identifier.
         /// </value>
-        public int Id { get; set; }
-        public string Type { get; set; } 
-        public DateTime EventDate { get; set; }
-        public string Description { get; set; }
-        public string SeverityLevel {  get; set; }  
-        public string Status { get; set; }
-        public List<Vehicle> AssingnedVehicle{  get; set; }
-        public List<Person> AssignedPersonnel { get; set; }
-        public List<Equipment> AssignedEquipment { get; set; }
+        private int Id { get; set; }
+        private string Type { get; set; }
+        private DateTime StartEventDate { get; set; }
+        private DateTime EndEventDate { get; set; }
+        private string Description { get; set; }
+        private string SeverityLevel { get; set; }
+        private string Status { get; set; }
+        private List<Vehicle> AssingnedVehicle { get; set; }
+        private List<Person> AssignedPersonnel { get; set; }
+        private List<Equipment> AssignedEquipment { get; set; }
+
+
+
         #endregion
 
         #region Constructors 
@@ -36,19 +40,22 @@ namespace EMS.models
         /// <param name="description">The description.</param>
         /// <param name="severityLevel">The severity level.</param>
         /// <param name="status">The status.</param>
-        public Event(int id, string type ,string description, string severityLevel, string status,string vehicle)
+        public Event(int id, string type, DateTime starEventDate, DateTime endEventDate, string description, string severityLevel, string status, string vehicle)
         {
             Id = id;
             Type = type;
+            StartEventDate = starEventDate;
+            EndEventDate = endEventDate;
             Description = description;
             SeverityLevel = severityLevel;
             Status = status;
-           
+
         }
         #endregion
 
         #region Methods        
-       
+
+
         #endregion
     }
 }

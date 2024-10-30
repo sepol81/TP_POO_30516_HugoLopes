@@ -11,6 +11,7 @@ namespace EMS.enums
         Moderada,
         Séria,
         severa,
-        Critica
+        Critica,
+        Other
     }
 }
