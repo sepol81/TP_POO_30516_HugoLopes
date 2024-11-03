@@ -1,6 +1,11 @@
-﻿
-
-
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name         : Equipment.cs                                                  *
+ * Author            : Hugo Lopes                                                    *
+ * Creation Date     : 26/10/2024                                                    *
+ * Description       : Represents an equipment item used in rescue activities.       *
+ *                    This class contains properties for the equipment's identifier, *
+ *                    name, description, quantity, maintenance date, and status.     *
+ *-----------------------------------------------------------------------------------*/
 
 using EMS.enums;
 
@@ -49,6 +54,8 @@ namespace EMS.models.Equiments
         }
 
         #endregion
+
+        #region Methods
         public override string ToString()
         {
             return  $"Id: {Id}\n" +
@@ -58,6 +65,6 @@ namespace EMS.models.Equiments
                     $"Maintenaince: {MaintenanceDate}\n" +
                     $"Status: {Status}\n";
         }
-
+        #endregion
     }
 }

@@ -1,4 +1,12 @@
-﻿using EMS.enums;
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name        : Vehicles.cs                                                    *
+ * Author           : Hugo Lopes                                                     *
+ * Creation Date    : 26/10/2024                                                     *
+ * Description      : Defines the abstract Vehicle class, representing a vehicle in  *
+ *                    the Emergency Management System.                               *
+ *-----------------------------------------------------------------------------------*/
+
+using EMS.enums;
 using Utils;
 
 namespace EMS.models.Vehicles
@@ -8,11 +16,11 @@ namespace EMS.models.Vehicles
     /// </summary>
     public abstract class Vehicle
     {
+        #region Private Properties 
         /// <summary>
         /// The age calculator
         /// </summary>
         private readonly CalAge ageCalculator = new CalAge();
-        #region Private Properties        
         private string carRegist { get; set; }
         private DateOnly yearOfRegist { get; set; }
         private TypeVehicle type { get; set; }

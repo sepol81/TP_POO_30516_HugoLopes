@@ -1,4 +1,9 @@
-﻿
+﻿/*-----------------------------------------------------------------------------------*
+ * Nome do Ficheiro  : FuntionVehicles.cs                                            *
+ * Autor             : Hugo Lopes                                                    *
+ * Data de Criação   : 26/10/2024                                                    *
+ * Descrição         : Enumeration defining the function of vehicles used in EMS.    *
+ *-----------------------------------------------------------------------------------*/
 
 namespace EMS.enums
 {

@@ -1,5 +1,13 @@
-﻿using EMS.enums;
+﻿/*-------------------------------------------------------------------------------------*
+ * File Name        : Ambulance.cs                                                     *
+ * Author           : Hugo Lopes                                                       *
+ * Creation Date    : 26/10/2024                                                       *
+ * Description      : Defines the Ambulance class, representing an ambulance in the    *
+ *                    Emergency Management System. It includes properties for crew     *
+ *                    capacity and overrides the method for displaying vehicle details.*
+ *-------------------------------------------------------------------------------------*/
 
+using EMS.enums;
 
 namespace EMS.models.Vehicles
 {
@@ -10,9 +18,10 @@ namespace EMS.models.Vehicles
     public class Ambulance : Vehicle
         {
         #region Properties
-
+        public int CrewCapacity { get; set; } // Capacidade de tripulação
+               
         #endregion
-        
+
         #region Construters
         /// <summary>
         /// Initializes a new instance of the <see cref="Ambulance"/> class.

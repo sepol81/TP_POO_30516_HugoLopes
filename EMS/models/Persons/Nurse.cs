@@ -1,12 +1,16 @@
 ﻿/*-----------------------------------------------------------------------*
- * Nome do Ficheiro  : Nurse.cs                                          *
- * Autor             : Hugo Lopes                                        *
- * Data de Criação   : 26/10/2024                                        *
- * Descrição         : Defines the Nurse class, representing a nurse     *  
- *                           in the Emergency Managemente System.        *
+ * File Name        : Nurse.cs                                           *
+ * Author           : Hugo Lopes                                         *
+ * Creation Date    : 26/10/2024                                         *
+ * Description      : Defines the Nurse class, representing a nurse in   *
+ *                    the Emergency Management System. It includes       *
+ *                    properties specific to nurses, such as card number *
+ *                    and area of activity, and implements the           *
+ *                    TypePerson method to return details of the nurse.  *
  *-----------------------------------------------------------------------*/
 
 using EMS.enums;
+
 namespace EMS.models.Persons
 {
     /// <summary>
@@ -46,7 +50,6 @@ namespace EMS.models.Persons
 
         }
         #endregion
-
 
         #region Methods               
         /// <summary>

@@ -1,4 +1,13 @@
-﻿using EMS.models.Events;
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name        : INEM.cs                                                        *
+ * Author           : Hugo Lopes                                                     *
+ * Creation Date    : 26/10/2024                                                     *
+ * Description      : Class representing INEM (National Institute of Medical         *
+ *                    Emergency), managing vehicles, medical staff, and medical      *
+ *                    events in the Emergency Management System.                     *
+ *-----------------------------------------------------------------------------------*/
+
+using EMS.models.Events;
 using EMS.models.Persons;
 using EMS.models.Vehicles;
 

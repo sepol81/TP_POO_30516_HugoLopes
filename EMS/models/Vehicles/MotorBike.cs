@@ -1,5 +1,13 @@
-﻿
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name        : MotorBike.cs                                                  *
+ * Author           : Hugo Lopes                                                     *
+ * Creation Date    : 26/10/2024                                                     *
+ * Description      : Represents a motorbike in the system, including properties     *
+ *                    for engine capacity, siren availability, and first aid kit.    *
+ *-----------------------------------------------------------------------------------*/
+
 using EMS.enums;
+
 namespace EMS.models.Vehicles
 {
     /// <summary>
@@ -8,6 +16,13 @@ namespace EMS.models.Vehicles
     /// <seealso cref="EMS.models.Vehicles.Vehicle" />
     public class MotorBike : Vehicle
     {
+        #region Properties
+        public int EngineCapacity { get; set; } 
+        public bool HasSiren { get; set; } 
+        public bool HasFirstAidKit { get; set; }
+        #endregion
+
+        #region Construters
         /// <summary>
         /// Initializes a new instance of the <see cref="MotorBike"/> class.
         /// </summary>
@@ -24,6 +39,9 @@ namespace EMS.models.Vehicles
             
 
         }
+        #endregion
+
+        #region Methods
         /// <summary>
         /// Types the vehicles.
         /// </summary>
@@ -38,5 +56,6 @@ namespace EMS.models.Vehicles
                     $"Inspetion Date:{InspDate}\n" +
                     $"Status{Status}\n ";  
         }
+        #endregion
     }
 }

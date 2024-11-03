@@ -1,4 +1,9 @@
-﻿
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name         : StatusPerson.cs                                               *
+ * Author            : Hugo Lopes                                                    *
+ * Creation Date     : 26/10/2024                                                    *
+ * Description       : Enumeration defining the status of a person in EMS.           *
+ *-----------------------------------------------------------------------------------*/
 
 namespace EMS.enums
 {

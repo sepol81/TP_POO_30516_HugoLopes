@@ -1,5 +1,13 @@
-﻿using EMS.enums;
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name        : Helicopter.cs                                                  *
+ * Author           : Hugo Lopes                                                     *
+ * Creation Date    : 26/10/2024                                                     *
+ * Description      : Represents a helicopter in the system, including properties    *
+ *                    for maximum altitude, range, medical equipment availability,   *
+ *                    and crew capacity.                                             *
+ *-----------------------------------------------------------------------------------*/
 
+using EMS.enums;
 
 namespace EMS.models.Vehicles
 {
@@ -9,6 +17,14 @@ namespace EMS.models.Vehicles
     /// <seealso cref="EMS.models.Vehicles.Vehicle" />
     public class Helicopter : Vehicle
     {
+        #region Properties
+        public int MaxAltitude { get; set; } 
+        public int MaxRange { get; set; } 
+        public bool HasMedicalEquipment { get; set; } 
+        public int CrewCapacity { get; set; }
+        #endregion
+
+        #region Construters
         /// <summary>
         /// Initializes a new instance of the <see cref="Helicopter"/> class.
         /// </summary>
@@ -25,6 +41,9 @@ namespace EMS.models.Vehicles
             
 
         }
+        #endregion
+
+        #region Methods
         /// <summary>
         /// Types the vehicles.
         /// </summary>
@@ -39,5 +58,6 @@ namespace EMS.models.Vehicles
                     $"Inspetion Date:{InspDate}" +
                     $"Status{Status}";
         }
+        #endregion
     }
 }

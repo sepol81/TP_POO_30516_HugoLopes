@@ -1,9 +1,14 @@
-﻿
+﻿/*-------------------------------------------------------------------------------------*
+ * File Name       : TypeOfCatastrophe.cs                                              *
+ * Author          : Hugo Lopes                                                        *
+ * Creation Date   : 26/10/2024                                                        *
+ * Description     : Enumeration defining different types of catastrophes used in EMS. *
+ *-------------------------------------------------------------------------------------*/
 
 namespace EMS.enums
 {
     /// <summary>
-    /// Enumerates a type of Catatrophe
+    /// Enumerates a type of Catastrophe
     /// </summary>
     public enum TypeOfCatastrophe
     {

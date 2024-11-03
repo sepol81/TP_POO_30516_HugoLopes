@@ -1,5 +1,11 @@
-﻿using EMS.models.Persons;
-
+﻿/*------------------------------------------------------------------------------------*
+ * File Name         : EventsManager.cs                                               *
+ * Author            : Hugo Lopes                                                     *
+ * Creation Date     : 26/10/2024                                                     *
+ * Description       : Manages emergency events by providing methods to add, remove,  *
+ *                    and update events in the system. This class maintains a list of *
+ *                    events and handles their lifecycle.                             *
+ *------------------------------------------------------------------------------------*/
 
 namespace EMS.models.Events
 {
@@ -8,10 +14,14 @@ namespace EMS.models.Events
     /// </summary>
     public class EventsManager
     {
+        #region Properties
         /// <summary>
         /// The events
         /// </summary>
         private List<Event> events;
+        #endregion
+
+        #region Construters
         /// <summary>
         /// Initializes a new instance of the <see cref="EventsManager"/> class.
         /// </summary>
@@ -19,6 +29,9 @@ namespace EMS.models.Events
         {
             events = new List<Event>();
         }
+        #endregion
+
+        #region Methods
         /// <summary>
         /// Adds the event.
         /// </summary>
@@ -34,5 +47,6 @@ namespace EMS.models.Events
         /// </summary>
         /// <param name="updatedEvent">The updated event.</param>
         public void UpdateEvent(Event updatedEvent){}
+        #endregion
     }
 }

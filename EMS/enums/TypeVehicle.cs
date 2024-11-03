@@ -1,4 +1,9 @@
-﻿ 
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name         : TypeVehicle.cs                                                *
+ * Author            : Hugo Lopes                                                    *
+ * Creation Date     : 26/10/2024                                                    *
+ * Description       : Enumeration defining different types of vehicles used in EMS. *
+ *-----------------------------------------------------------------------------------*/
 
 namespace EMS.enums
 {

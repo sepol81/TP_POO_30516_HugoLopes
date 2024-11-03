@@ -1,4 +1,9 @@
-﻿
+﻿/*-----------------------------------------------------------------------------------*
+ * Nome do Ficheiro  : RankFireFighter.cs                                            *
+ * Autor             : Hugo Lopes                                                    *
+ * Data de Criação   : 26/10/2024                                                    *
+ * Descrição         : Enumeration defining the rank of firefighter in EMS.          *
+ *-----------------------------------------------------------------------------------*/
 
 namespace EMS.enums
 {

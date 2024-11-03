@@ -1,4 +1,11 @@
-﻿
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name        : FireStation.cs                                                 *
+ * Author           : Hugo Lopes                                                     *
+ * Creation Date    : 26/10/2024                                                     *
+ * Description      : Defines the FireStation class, representing a fire station in  *
+ *                    the Emergency Management System, managing persons,vehicles,    *
+ *                    and equipment.                                                 *
+ *-----------------------------------------------------------------------------------*/
 
 using EMS.models.Persons;
 using EMS.models.Vehicles;
@@ -49,7 +56,7 @@ namespace EMS.models
         }
         #endregion
 
-
+        #region Methods
         /// <summary>
         /// Adds the fire fighter.
         /// </summary>
@@ -85,5 +92,6 @@ namespace EMS.models
         /// </summary>
         /// <param name="fireEvent">The fire event.</param>
         public void RespondToEmergency(FireEvent fireEvent){}
+        #endregion
     }
 }

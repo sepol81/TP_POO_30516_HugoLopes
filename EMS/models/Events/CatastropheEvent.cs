@@ -1,5 +1,15 @@
-﻿using EMS.enums;
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name         : CatastropheEvent.cs                                           *
+ * Author            : Hugo Lopes                                                    *
+ * Creation Date     : 26/10/2024                                                    *
+ * Description       : Represents a catastrophe event in the emergency management    *
+ *                    system. This class includes details about the event such as    *
+ *                    its identifier, type, address, start and end dates,            *
+ *                    description, severity level, status, affected area, type of    *
+ *                    catastrophe, and number of victims involved.                   *
+ *-----------------------------------------------------------------------------------*/
 
+using EMS.enums;
 
 namespace EMS.models.Events
 {

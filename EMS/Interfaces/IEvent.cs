@@ -1,4 +1,12 @@
-﻿using EMS.models.Persons;
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name         : IEvent.cs                                                     *
+ * Author            : Hugo Lopes                                                    *
+ * Creation Date     : 26/10/2024                                                    *
+ * Description       : Interface for managing emergency events, allowing assignment  *
+ *                    of vehicles and persons to events.                             *
+ *-----------------------------------------------------------------------------------*/
+
+using EMS.models.Persons;
 using EMS.models.Vehicles;
 
 

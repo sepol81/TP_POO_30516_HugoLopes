@@ -1,11 +1,16 @@
-﻿using EMS.enums;
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name        : Program.cs                                                     *
+ * Author           : Hugo Lopes                                                     *
+ * Creation Date    : 26/10/2024                                                     *
+ * Description      : Entry point for the Emergency Management System, demonstrating *
+ *                    the instantiation and usage of various classes.                *
+ *-----------------------------------------------------------------------------------*/
+
+using EMS.enums;
 using EMS.models.Equiments;
 using EMS.models.Events;
 using EMS.models.Persons;
 using EMS.models.Vehicles;
-using System;
-using System.Xml.Linq;
-
 
 namespace EMS
 {
@@ -98,6 +103,7 @@ namespace EMS
             Console.WriteLine(paramedic.TypePerson());
             #endregion
 
+            #region Create FireTruck Object
             FireTruck fireTruck = new FireTruck
                 (
                     CarRegist: "23-WE-34",
@@ -110,8 +116,9 @@ namespace EMS
                  );
 
             Console.WriteLine(fireTruck.TypeVehicles());
+            #endregion
 
-
+            #region Create Ambulence Object
             Ambulance ambulance = new Ambulance
                (
                    CarRegist: "25-PO-33",
@@ -124,7 +131,9 @@ namespace EMS
                 );
 
             Console.WriteLine(ambulance.TypeVehicles());
+            #endregion
 
+            #region Create MedicalEvent Object
             MedicalEvent medicalEvent = new MedicalEvent
                 (
                     id: 1,
@@ -140,7 +149,9 @@ namespace EMS
                 );
 
             Console.WriteLine(medicalEvent);
+            #endregion
 
+            #region Create Equipment Object
 
             Equipment equipment = new Equipment
                 (
@@ -154,6 +165,7 @@ namespace EMS
                 );
 
             Console.WriteLine (equipment);
+            #endregion
         }
     }
 }

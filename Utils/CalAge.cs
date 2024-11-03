@@ -1,12 +1,14 @@
-﻿namespace Utils
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name         : CalAge.cs                                                     *
+ * Author            : Hugo Lopes                                                    *
+ * Creation Date     : 26/10/2024                                                    *
+ * Description       : Contains methods for calculating age based on a given date.   *
+ *-----------------------------------------------------------------------------------*/
+
+namespace Utils
 {
     public class CalAge
     {
-        /// <summary>
-        /// Class Operations 
-        /// </summary>
-       
-        
             #region Public Methods
             /// <summary>
             /// Calculate Age base on date
@@ -21,7 +23,6 @@
                 return age;
             }
             #endregion
-        
-
+      
     }
 }

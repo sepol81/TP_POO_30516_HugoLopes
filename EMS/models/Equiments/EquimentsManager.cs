@@ -1,4 +1,10 @@
-﻿
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name         : EquipmentManager.cs                                           *
+ * Author            : Hugo Lopes                                                    *
+ * Creation Date     : 26/10/2024                                                    *
+ * Description       : Manages a collection of equipment used in rescue activities.  *
+ *                    This class provides methods to add, remove, and list equipment.*
+ *-----------------------------------------------------------------------------------*/
 
 namespace EMS.models.Equiments
 {

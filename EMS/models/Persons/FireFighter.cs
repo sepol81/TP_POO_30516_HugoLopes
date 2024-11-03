@@ -1,11 +1,16 @@
 ﻿/*-----------------------------------------------------------------------------------*
- * Nome do Ficheiro  : FireFighter.cs                                                *
- * Autor             : Hugo Lopes                                                    *
- * Data de Criação   : 26/10/2024                                                    *
- * Descrição         : Defines the Fire-Fighter class, representing a fireFighter   *  
- *                           in the Emergency Managemente System.                    *
+ * File Name         : FireFighter.cs                                                *
+ * Author            : Hugo Lopes                                                    *
+ * Creation Date     : 26/10/2024                                                    *
+ * Description       : Defines the FireFighter class, representing a firefighter in  *
+ *                    the Emergency Management System. It includes properties for    *
+ *                    rank, years of experience, certifications, and skills, along   *
+ *                    with the implementation of the TypePerson method to return     *
+ *                    details of the firefighter.                                    *
  *-----------------------------------------------------------------------------------*/
+
 using EMS.enums;
+
 namespace EMS.models.Persons
 {
     /// <summary>

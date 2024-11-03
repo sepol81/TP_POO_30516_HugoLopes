@@ -1,4 +1,12 @@
-﻿
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name        : Paramedic.cs                                                  *
+ * Author           : Hugo Lopes                                                     *
+ * Creation Date    : 26/10/2024                                                     *
+ * Description      : Represents a paramedic in the Emergency Management System,     *
+ *                    inheriting from the Person class. Contains properties specific  *
+ *                    to paramedics, such as the technical number, and implements    *
+ *                    the TypePerson method to return details of the paramedic.      *
+ *-----------------------------------------------------------------------------------*/
 
 using EMS.enums;
 
@@ -15,6 +23,7 @@ namespace EMS.models.Persons
         /// </value>
         private string TechnicalNumber {  get; set; }
         #endregion
+
         #region Constructors                      
         /// <summary>
         /// Initializes a new instance of the <see cref="Paramedic"/> class.
@@ -35,7 +44,6 @@ namespace EMS.models.Persons
             this.TechnicalNumber = TechnicalNumber;
         }
         #endregion
-
 
         #region Methods               
         /// <summary>

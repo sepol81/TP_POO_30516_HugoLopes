@@ -1,10 +1,12 @@
-﻿/*-----------------------------------------------------------------------*
- * Nome do Ficheiro  : Doctor.cs                                         *
- * Autor             : Hugo Lopes                                        *
- * Data de Criação   : 26/10/2024                                        *
- * Descrição         : Defines the Doctor class, representing a doctor   *  
- *                           in the Emergency Managemente System.        *
- *-----------------------------------------------------------------------*/
+﻿/*----------------------------------------------------------------------------------*
+ * File Name         : Doctor.cs                                                    *
+ * Author            : Hugo Lopes                                                   *
+ * Creation Date     : 26/10/2024                                                   *
+ * Description       : Defines the Doctor class, representing a doctor in           *
+ *                    the Emergency Management System. It includes properties       *
+ *                    for card number and specialty, along with the implementation  *
+ *                    of the TypePerson method to return details of the doctor.     *
+ *----------------------------------------------------------------------------------*/
 
 using EMS.enums;
 
@@ -44,7 +46,6 @@ namespace EMS.models.Persons
             
         }
         #endregion
-
 
         #region Methods              
         /// <summary>

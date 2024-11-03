@@ -1,10 +1,14 @@
-﻿
-// *-----------------------------------------------------------------------*
-// * Nome do Ficheiro  :                                                   *
-// * Autor             : Hugo Lopes                                        *
-// * Data de Criação   :                                                   *
-// * Descrição         :                                                   *
-// *-----------------------------------------------------------------------*
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name         : Event.cs                                                      *
+ * Author            : Hugo Lopes                                                    *
+ * Creation Date     : 26/10/2024                                                    *
+ * Description       : Defines the Event class, representing an emergency event      *
+ *                    or occurrence in the Emergency Management System. This class   *
+ *                    maintains details such as the event's identifier, type,        *
+ *                    address, dates, description, severity level, and status. It    *
+ *                    also manages assigned vehicles and persons involved in the     *
+ *                    event.                                                         *
+ *-----------------------------------------------------------------------------------*/
 
 using EMS.models.Vehicles;
 using EMS.models.Persons;

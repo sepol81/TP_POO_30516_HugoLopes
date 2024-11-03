@@ -1,4 +1,13 @@
-﻿using EMS.enums;
+﻿/*-----------------------------------------------------------------------------------*
+ * File Name        : FireTruck.cs                                                   *
+ * Author           : Hugo Lopes                                                     *
+ * Creation Date    : 26/10/2024                                                     *
+ * Description      : Defines the FireTruck class, representing a fire truck in the  *
+ *                    Emergency Management System. It includes properties for water   *
+ *                    tank capacity and crew capacity.                               *
+ *-----------------------------------------------------------------------------------*/
+
+using EMS.enums;
 
 namespace EMS.models.Vehicles
 {
@@ -16,6 +25,7 @@ namespace EMS.models.Vehicles
         /// The water tank capacity.
         /// </value>
         public int WaterTankCapacity { get; set; }
+        public int CrewCapacity { get; set; }
         #endregion
 
         #region Construters

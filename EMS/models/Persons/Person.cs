@@ -1,5 +1,18 @@
-﻿using EMS.enums;
+﻿/*-------------------------------------------------------------------------------------*
+ * File Name        : Person.cs                                                        *
+ * Author           : Hugo Lopes                                                       *
+ * Creation Date    : 26/10/2024                                                       *
+ * Description      : Represents a generic person with common properties shared        *
+ *                    by all individuals in the system, such as ID, name, contact      *
+ *                    details, and other identifying information. It serves as an      *
+ *                    abstract base class for specific person types (e.g., doctor,     *
+ *                    nurse, firefighter) and defines a method to specify the type of  *
+ *                    person.                                                          *
+ *-------------------------------------------------------------------------------------*/
+
+using EMS.enums;
 using Utils;
+
 namespace EMS.models.Persons
 {
     /// <summary>
@@ -8,12 +21,11 @@ namespace EMS.models.Persons
     /// </summary>
     public abstract class Person
     {
+        #region Private Properties
         /// <summary>
         /// The age calculator
         /// </summary>
         private readonly CalAge ageCalculator = new CalAge();
-
-        #region Private Properties
         private int id { get; set; }
         private string name { get; set; }
         private string citCard { get; set; }
@@ -135,7 +147,5 @@ namespace EMS.models.Persons
 
 
         #endregion;
-
-
     }
 }
