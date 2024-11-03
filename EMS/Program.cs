@@ -1,7 +1,10 @@
 ﻿using EMS.enums;
+using EMS.models.Equiments;
+using EMS.models.Events;
 using EMS.models.Persons;
 using EMS.models.Vehicles;
 using System;
+using System.Xml.Linq;
 
 
 namespace EMS
@@ -24,7 +27,6 @@ namespace EMS
                 Profession: Profession.Bombeiro,
                 Status: StatusPerson.EmServiço,
                 Birthday: new DateOnly(1975, 7, 21),
-                Age:0,
                 Email: "fffff@123.com",
                 Phone: "945556954",
                 Address: "Barcelos",
@@ -46,10 +48,11 @@ namespace EMS
                 Profession: Profession.Medico,
                 Status: StatusPerson.Disponivel,
                 Birthday: new DateOnly(1981, 7, 23),
-                Age: 0,
                 Email: "ddddd@123.com",
                 Phone: "95896625",
-                Address: "Porto"
+                Address: "Porto",
+                CardNumber: "123015622",
+                Specialty: "Emergências"
 
             );
 
@@ -65,10 +68,11 @@ namespace EMS
                Profession: Profession.Enfermeiro,
                Birthday: new DateOnly(1994, 7, 23),
                Status: StatusPerson.EmDescanso,
-               Age: 0,
                Email: "nnnnn@123.com",
                Phone: "023654985",
-               Address: "Lisboa"
+               Address: "Lisboa",
+               CardNumber: "123456789",
+               AreOfActivity: "pediatria"
 
            );
 
@@ -84,10 +88,10 @@ namespace EMS
                Profession: Profession.Paramédico,
                Birthday: new DateOnly(1993, 7, 23),
                Status: StatusPerson.Disponivel,
-               Age: 0,
                Email: "pppp@123.com",
                Phone: "023654985",
-               Address: "Évora"
+               Address: "Évora",
+               TechnicalNumber: "1236958"
 
            );
 
@@ -98,7 +102,6 @@ namespace EMS
                 (
                     CarRegist: "23-WE-34",
                     YearOfRegist: new DateOnly(1970, 6, 26),
-                    Age: 0,
                     Type: TypeVehicle.FireTruck,
                     Brand: "Mercedes",
                     InspDate: new DateOnly(2024, 12, 30),
@@ -106,14 +109,13 @@ namespace EMS
                     WaterTankCapacity: 3000
                  );
 
-                Console.WriteLine(fireTruck.TypeVehicles());
+            Console.WriteLine(fireTruck.TypeVehicles());
 
 
             Ambulance ambulance = new Ambulance
                (
                    CarRegist: "25-PO-33",
                    YearOfRegist: new DateOnly(1980, 6, 26),
-                   Age: 0,
                    Type: TypeVehicle.Ambulence,
                    Brand: "Renault",
                    InspDate: new DateOnly(2024, 12, 30),
@@ -121,14 +123,37 @@ namespace EMS
 
                 );
 
-                Console.WriteLine(ambulance.TypeVehicles());
+            Console.WriteLine(ambulance.TypeVehicles());
 
+            MedicalEvent medicalEvent = new MedicalEvent
+                (
+                    id: 1,
+                    type: TypeEvent.Medical,
+                    address:"rua das Canas nº25, Porto",
+                    startEventDate: new DateTime(2024, 12, 5, 15, 15, 00),
+                    endEventDate: new DateTime(2024, 12, 5, 20, 30, 00),
+                    description: "Acidente entre duas viaturas",
+                    severityLevel: EventSeverityLevel.Séria,
+                    status: StatusEvent.EmProgresso,
+                    numberOfVictims: 3,
+                    typeOfEmergency: TypeOfEmergency.Choque
+                );
+
+            Console.WriteLine(medicalEvent);
+
+
+            Equipment equipment = new Equipment
+                (
+                   id: 4,
+                   name: "Oxigénio",
+                   description: "botija de 30l",
+                   quantity: 5,
+                   maintenanceDate: new DateOnly(2024, 05, 25),
+                   status: StatusEquipment.Disponivel
+
+                );
+
+            Console.WriteLine (equipment);
         }
-              
-
-
-        
-
-
     }
 }

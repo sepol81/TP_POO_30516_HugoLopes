@@ -12,6 +12,6 @@ namespace EMS.enums
         Séria,
         severa,
         Critica,
-        Other
+        Outro
     }
 }

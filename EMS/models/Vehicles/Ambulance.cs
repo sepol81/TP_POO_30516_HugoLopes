@@ -24,8 +24,8 @@ namespace EMS.models.Vehicles
         /// <param name="Brand">The brand.</param>
         /// <param name="InspDate">The insp date.</param>
         /// <param name="Status">The status.</param>
-        public Ambulance(string CarRegist, DateOnly YearOfRegist, int Age, TypeVehicle Type, string Brand, DateOnly InspDate, StatusVehicle Status)
-           : base(CarRegist, YearOfRegist, Age, Type, Brand, InspDate, Status)
+        public Ambulance(string CarRegist, DateOnly YearOfRegist, TypeVehicle Type, string Brand, DateOnly InspDate, StatusVehicle Status)
+           : base(CarRegist, YearOfRegist, Type, Brand, InspDate, Status)
         {
             
 

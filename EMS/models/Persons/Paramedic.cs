@@ -6,22 +6,34 @@ namespace EMS.models.Persons
 {
     public class Paramedic : Person
     {
-        #region Constructors              
+        #region Properties        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Nurse"/> class.
+        /// Gets or sets the technical number.
         /// </summary>
-        /// <param name="Id"></param>
-        /// <param name="Name"></param>
-        /// <param name="CitCard"></param>
-        /// <param name="Profession"></param>
-        /// <param name="Status"></param>
-        /// <param name="Birthday"></param>
-        /// <param name="Age"></param>
-        /// <param name="Email"></param>
-        /// <param name="Phone"></param>
-        /// <param name="Address"></param>
-        public Paramedic(int Id, string Name, string CitCard, Profession Profession, StatusPerson Status, DateOnly Birthday, int Age, string Email, string Phone, string Address)
-          : base(Id, Name, CitCard, Profession, Status, Birthday, Age, Email, Phone, Address) { }
+        /// <value>
+        /// The technical number.
+        /// </value>
+        private string TechnicalNumber {  get; set; }
+        #endregion
+        #region Constructors                      
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Paramedic"/> class.
+        /// </summary>
+        /// <param name="Id">The identifier.</param>
+        /// <param name="Name">The name.</param>
+        /// <param name="CitCard">The cit card.</param>
+        /// <param name="Profession">The profession.</param>
+        /// <param name="Status">The status.</param>
+        /// <param name="Birthday">The birthday.</param>
+        /// <param name="Email">The email.</param>
+        /// <param name="Phone">The phone.</param>
+        /// <param name="Address">The address.</param>
+        /// <param name="TechnicalNumber">The technical number.</param>
+        public Paramedic(int Id, string Name, string CitCard, Profession Profession, StatusPerson Status, DateOnly Birthday, string Email, string Phone, string Address, string TechnicalNumber)
+          : base(Id, Name, CitCard, Profession, Status, Birthday, Email, Phone, Address)
+        {
+            this.TechnicalNumber = TechnicalNumber;
+        }
         #endregion
 
 
@@ -35,7 +47,7 @@ namespace EMS.models.Persons
         /// </returns>
         public override string TypePerson()
         {
-            return $"ID: {Id}\n" +
+            return  $"ID: {Id}\n" +
                     $"Name: {Name}\n" +
                     $"CitCard: {CitCard} \n" +
                     $"Profession: {Profession}\n" +
@@ -44,7 +56,8 @@ namespace EMS.models.Persons
                     $"Age: {Age} \n" +
                     $"Email: {Email} \n" +
                     $"Phone: {Phone}  \n" +
-                    $"Address: {Address}  \n";
+                    $"Address: {Address}  \n" +
+                    $"Technical Number: {TechnicalNumber}\n";
         }
         #endregion
     }

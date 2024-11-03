@@ -5,8 +5,8 @@
         /// <summary>
         /// Class Operations 
         /// </summary>
-        public class Date
-        {
+       
+        
             #region Public Methods
             /// <summary>
             /// Calculate Age base on date
@@ -21,7 +21,7 @@
                 return age;
             }
             #endregion
-        }
+        
 
     }
 }

@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace EMS.enums
 {
+    /// <summary>
+    /// Enumerates a type of event
+    /// </summary>
     public enum TypeEvent
     {
-        FireEmergency,
-        MedicalEmergency,
-        Catastrophes,
-        Others
+        Incêndio,
+        Medical,
+        Catastrofes,
+        Outro
     }
 }

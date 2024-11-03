@@ -11,7 +11,7 @@ namespace EMS.models.Persons
         /// <summary>
         /// The age calculator
         /// </summary>
-        private readonly CalAge.Date ageCalculator = new CalAge.Date();
+        private readonly CalAge ageCalculator = new CalAge();
 
         #region Private Properties
         private int id { get; set; }
@@ -39,7 +39,7 @@ namespace EMS.models.Persons
         public int Id
         {
             get => id;
-            set => id = value;
+            private set => id = value;
         }
         public string Name
         {
@@ -106,7 +106,7 @@ namespace EMS.models.Persons
         /// <param name="email">The email.</param>
         /// <param name="phone">The phone.</param>
         /// <param name="address">The address.</param>
-        public Person(int id, string name, string citCard,Profession profession, StatusPerson status, DateOnly birthday, int Age, string email, string phone, string address)
+        public Person(int id, string name, string citCard,Profession profession, StatusPerson status, DateOnly birthday, string email, string phone, string address)
         {
             Id = id;
             Name = name;
@@ -114,7 +114,6 @@ namespace EMS.models.Persons
             Profession = profession;
             Status = status;
             Birthday = birthday;
-            Age = Age;
             Email = email;
             Phone = phone;
             Address = address;

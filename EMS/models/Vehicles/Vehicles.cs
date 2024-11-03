@@ -3,12 +3,15 @@ using Utils;
 
 namespace EMS.models.Vehicles
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public abstract class Vehicle
     {
         /// <summary>
         /// The age calculator
         /// </summary>
-        private readonly CalAge.Date ageCalculator = new CalAge.Date();
+        private readonly CalAge ageCalculator = new CalAge();
         #region Private Properties        
         private string carRegist { get; set; }
         private DateOnly yearOfRegist { get; set; }
@@ -28,7 +31,7 @@ namespace EMS.models.Vehicles
         public string CarRegist
         {
             get => carRegist;
-            set => carRegist = value;
+            private set => carRegist = value;
         }
         public DateOnly YearOfRegist
         {
@@ -69,11 +72,10 @@ namespace EMS.models.Vehicles
         /// <param name="brand">The brand.</param>
         /// <param name="inspDate">The insp date.</param>
         /// <param name="status">The status.</param>
-        public Vehicle(string carRegist,DateOnly yearOfRegist,int Age, TypeVehicle type, string brand, DateOnly inspDate, StatusVehicle status)
+        public Vehicle(string carRegist,DateOnly yearOfRegist, TypeVehicle type, string brand, DateOnly inspDate, StatusVehicle status)
         {
             CarRegist = carRegist;
-            YearOfRegist=yearOfRegist;
-            Age = Age;
+            YearOfRegist = yearOfRegist;
             Type = type;
             Brand = brand;
             InspDate = inspDate;

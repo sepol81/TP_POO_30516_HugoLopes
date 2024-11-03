@@ -8,7 +8,7 @@ namespace EMS.models.Vehicles
     /// <seealso cref="EMS.models.Vehicles.Vehicle" />
     public class FireTruck : Vehicle
     {
-        #region Construters
+        #region Properties
         /// <summary>
         /// Gets or sets the water tank capacity.
         /// </summary>
@@ -18,7 +18,7 @@ namespace EMS.models.Vehicles
         public int WaterTankCapacity { get; set; }
         #endregion
 
-        #region Properties
+        #region Construters
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FireTruck"/> class.
@@ -31,8 +31,8 @@ namespace EMS.models.Vehicles
         /// <param name="InspDate">The insp date.</param>
         /// <param name="Status">The status.</param>
         /// <param name="WaterTankCapacity">The water tank capacity.</param>
-        public FireTruck(string CarRegist, DateOnly YearOfRegist, int Age, TypeVehicle Type, string Brand, DateOnly InspDate, StatusVehicle Status, int WaterTankCapacity)
-           : base(CarRegist, YearOfRegist, Age, Type, Brand, InspDate, Status)
+        public FireTruck(string CarRegist, DateOnly YearOfRegist, TypeVehicle Type, string Brand, DateOnly InspDate, StatusVehicle Status, int WaterTankCapacity)
+           : base(CarRegist, YearOfRegist, Type, Brand, InspDate, Status)
         {
             this.WaterTankCapacity = WaterTankCapacity;
 

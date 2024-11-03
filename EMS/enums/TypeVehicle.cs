@@ -1,4 +1,4 @@
-﻿
+﻿ 
 
 namespace EMS.enums
 {
@@ -14,7 +14,6 @@ namespace EMS.enums
         Ambulence_INEM,
         Motorbike_INEM,
         Helicopter_INEM,
-
-        Other
+        Outro
     }
 }

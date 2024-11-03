@@ -10,6 +10,6 @@ namespace EMS.enums
         Disponivel,
         EmServiço,
         EmManutenção,
-        Other
+        Outro
     }
 }

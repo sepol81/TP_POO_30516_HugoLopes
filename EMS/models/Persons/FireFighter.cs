@@ -41,9 +41,9 @@ namespace EMS.models.Persons
         /// <param name="YearsOfExp">The years of exp.</param>
         /// <param name="Certifications">The certifications.</param>
         /// <param name="Skills">The skills.</param>
-        public FireFighter(int Id, string Name, string CitCard,Profession Profession, StatusPerson Status, DateOnly Birthday, int Age, string Email, string Phone, string Address,
+        public FireFighter(int Id, string Name, string CitCard,Profession Profession, StatusPerson Status, DateOnly Birthday, string Email, string Phone, string Address,
             RankFireFighter Rank, int YearsOfExp, List<string> Certifications, List<string> Skills)
-            : base(Id, Name, CitCard, Profession, Status, Birthday, Age, Email, Phone, Address)
+            : base(Id, Name, CitCard, Profession, Status, Birthday, Email, Phone, Address)
         {
             this.Rank = Rank;
             this.YearsOfExp = YearsOfExp;

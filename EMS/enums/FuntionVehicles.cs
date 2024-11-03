@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace EMS.enums
 {
+    /// <summary>
+    /// Enumerates a funtion of vehicle
+    /// </summary>
     public enum FuntionVehicles
     {
 	 Ambulânciade_Socorro_ABSC,
@@ -35,7 +34,7 @@ namespace EMS.enums
 	 Veículo_Rural_de_Combate_a_Incêndios_VRCI,
 	 Veículo_Florestalde_Combate_a_Incêndios_VFCI,
 	 Veículo_LigeirodeCombateaIncêndios_VLCI,
-	 Other
+	 Outro
 
     }
 }

@@ -1,12 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace EMS.models.Persons
 {
-    internal class PersonsManager
+    /// <summary>
+    /// 
+    /// </summary>
+    public class PersonsManager
     {
+        
+        private List<Person> persons;
+        
+        
+        public PersonsManager()
+        {
+            persons = new List<Person>();
+           
+        }
+        public void AddPersons(Person person){}
+       
+                
+        public void RemovePersons(Person person){}
+       
+        
+        public void UpdatePersons(Person person){}
+        
     }
 }
