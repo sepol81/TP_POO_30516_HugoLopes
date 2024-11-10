@@ -24,29 +24,40 @@ namespace EMS.models.Persons
         private string cardNumber {  get; set; }
         private string areaOfActivity { get; set; }
         
+        public string CardNumber 
+        { 
+            get=> cardNumber; 
+            set=> cardNumber = value; 
+        }
+
+        public string AreaOfActivity 
+        { 
+            get=> areaOfActivity ; 
+            set => areaOfActivity = value; 
+        }
 
 
         #endregion
 
-        #region Constructors              
+        #region Constructors                      
         /// <summary>
         /// Initializes a new instance of the <see cref="Nurse"/> class.
         /// </summary>
-        /// <param name="Id"></param>
-        /// <param name="Name"></param>
-        /// <param name="CitCard"></param>
-        /// <param name="Profession"></param>
-        /// <param name="Status"></param>
-        /// <param name="Birthday"></param>
-        /// <param name="Age"></param>
-        /// <param name="Email"></param>
-        /// <param name="Phone"></param>
-        /// <param name="Address"></param>
-        public Nurse(int Id, string Name, string CitCard,Profession Profession, StatusPerson Status, DateOnly Birthday, string Email, string Phone, string Address, string CardNumber, string AreOfActivity)
-          : base(Id, Name, CitCard, Profession, Status, Birthday, Email, Phone, Address) 
+        /// <param name="Name">The name.</param>
+        /// <param name="CitCard">The cit card.</param>
+        /// <param name="Profession">The profession.</param>
+        /// <param name="Status">The status.</param>
+        /// <param name="Birthday">The birthday.</param>
+        /// <param name="Email">The email.</param>
+        /// <param name="Phone">The phone.</param>
+        /// <param name="Address">The address.</param>
+        /// <param name="CardNumber">The card number.</param>
+        /// <param name="AreaOfActivity">The area of activity.</param>
+        public Nurse( string Name, string CitCard,Profession Profession, StatusPerson Status, DateOnly Birthday, string Email, string Phone, string Address, string CardNumber, string AreaOfActivity)
+          : base( Name, CitCard, Profession, Status, Birthday, Email, Phone, Address) 
         {
-            this.cardNumber = CardNumber;
-            this.areaOfActivity = AreOfActivity;
+            cardNumber = CardNumber;
+            areaOfActivity = AreaOfActivity;
 
         }
         #endregion

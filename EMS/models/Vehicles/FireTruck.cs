@@ -35,16 +35,17 @@ namespace EMS.models.Vehicles
         /// </summary>
         /// <param name="CarRegist">The car regist.</param>
         /// <param name="YearOfRegist">The year of regist.</param>
-        /// <param name="Age">The age.</param>
         /// <param name="Type">The type.</param>
         /// <param name="Brand">The brand.</param>
         /// <param name="InspDate">The insp date.</param>
         /// <param name="Status">The status.</param>
         /// <param name="WaterTankCapacity">The water tank capacity.</param>
-        public FireTruck(string CarRegist, DateOnly YearOfRegist, TypeVehicle Type, string Brand, DateOnly InspDate, StatusVehicle Status, int WaterTankCapacity)
+        /// <param name="CrewCapacity">The crew capacity.</param>
+        public FireTruck(string CarRegist, DateOnly YearOfRegist, TypeVehicle Type, string Brand, DateOnly InspDate, StatusVehicle Status, int WaterTankCapacity, int CrewCapacity)
            : base(CarRegist, YearOfRegist, Type, Brand, InspDate, Status)
         {
             this.WaterTankCapacity = WaterTankCapacity;
+            this.CrewCapacity = CrewCapacity;
 
         }
         #endregion
@@ -63,7 +64,8 @@ namespace EMS.models.Vehicles
                     $"Brand: {Brand} \n" +
                     $"Inspetion Date:{InspDate} \n" +
                     $"Status: {Status} \n"+
-                    $"Water Thank Capacity:{WaterTankCapacity} \n";
+                    $"Water Thank Capacity:{WaterTankCapacity} \n"+
+                    $"Crew Capacity: {CrewCapacity} people\n";
         }
         #endregion
     }

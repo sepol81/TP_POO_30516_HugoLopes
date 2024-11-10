@@ -22,21 +22,26 @@ namespace EMS.models.Vehicles
         public bool HasFirstAidKit { get; set; }
         #endregion
 
-        #region Construters
+        #region Construters        
         /// <summary>
         /// Initializes a new instance of the <see cref="MotorBike"/> class.
         /// </summary>
         /// <param name="CarRegist">The car regist.</param>
-        /// <param name="YearOfRegist"></param>
-        /// <param name="Age"></param>
+        /// <param name="YearOfRegist">The year of regist.</param>
         /// <param name="Type">The type.</param>
         /// <param name="Brand">The brand.</param>
         /// <param name="InspDate">The insp date.</param>
         /// <param name="Status">The status.</param>
-        public MotorBike(string CarRegist, DateOnly YearOfRegist, TypeVehicle Type, string Brand, DateOnly InspDate, StatusVehicle Status)
+        /// <param name="EngineCapacity">The engine capacity.</param>
+        /// <param name="HasSiren">if set to <c>true</c> [has siren].</param>
+        /// <param name="HasFirstAidKit">if set to <c>true</c> [has first aid kit].</param>
+        public MotorBike(string CarRegist, DateOnly YearOfRegist, TypeVehicle Type, string Brand, DateOnly InspDate, StatusVehicle Status,
+                         int EngineCapacity, bool HasSiren, bool HasFirstAidKit)
            : base(CarRegist, YearOfRegist, Type, Brand, InspDate, Status)
         {
-            
+            this.EngineCapacity = EngineCapacity;
+            this.HasSiren = HasSiren;
+            this.HasFirstAidKit = HasFirstAidKit;
 
         }
         #endregion
@@ -54,7 +59,10 @@ namespace EMS.models.Vehicles
                     $"Type:{Type}\n" +
                     $"Brand: {Brand}\n" +
                     $"Inspetion Date:{InspDate}\n" +
-                    $"Status{Status}\n ";  
+                    $"Status{Status}\n " +
+                    $"Engine Capacity: {EngineCapacity} cc\n" +
+                    $"Has Siren: {HasSiren}\n" +
+                    $"Has First Aid Kit: {HasFirstAidKit}\n";
         }
         #endregion
     }

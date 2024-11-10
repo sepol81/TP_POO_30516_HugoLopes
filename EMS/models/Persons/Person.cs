@@ -80,7 +80,7 @@ namespace EMS.models.Persons
             set => birthday = value;
         }
 
-        public int Age => ageCalculator.Age(Birthday);
+        public int Age => CalAge.Age(Birthday);
 
         
 
@@ -108,19 +108,16 @@ namespace EMS.models.Persons
         /// <summary>
         /// Initializes a new instance of the <see cref="Person"/> class.
         /// </summary>
-        /// <param name="id">The identifier.</param>
         /// <param name="name">The name.</param>
         /// <param name="citCard">The cit card.</param>
         /// <param name="profession">The profession.</param>
         /// <param name="status">The status.</param>
         /// <param name="birthday">The birthday.</param>
-        /// <param name="Age">The age.</param>
         /// <param name="email">The email.</param>
         /// <param name="phone">The phone.</param>
         /// <param name="address">The address.</param>
-        public Person(int id, string name, string citCard,Profession profession, StatusPerson status, DateOnly birthday, string email, string phone, string address)
+        public Person(string name, string citCard,Profession profession, StatusPerson status, DateOnly birthday, string email, string phone, string address)
         {
-            Id = id;
             Name = name;
             CitCard = citCard;
             Profession = profession;

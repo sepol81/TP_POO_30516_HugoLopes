@@ -12,8 +12,11 @@
 
 using EMS.models.Vehicles;
 using EMS.models.Persons;
+using EMS.models.Teams;
 using EMS.interfaces;
 using EMS.enums;
+using EMS.models.Teams;
+using EMS.models.Equiments;
 
 namespace EMS.models.Events
 {
@@ -24,12 +27,7 @@ namespace EMS.models.Events
     public class Event : IEvent
     {
         #region Propreties       
-        /// <summary>
-        /// Gets or sets the identifier.
-        /// </summary>
-        /// <value>
-        /// The identifier.
-        /// </value>
+        
         public int Id { get; private set; }
         public TypeEvent Type { get; set; }
         public string Address { get; set; }
@@ -38,62 +36,95 @@ namespace EMS.models.Events
         public string Description { get; set; }
         public EventSeverityLevel SeverityLevel { get; set; }
         public StatusEvent Status { get; set; }
-        public List<Vehicle> AssignedVehicles { get; set; }
-        public List<Person> AssignedPersons { get; set; }
+        public List<Team> TeamsInvolved { get; set; } = new List<Team>();  
+        public List<Vehicle> VehiclesInvolved { get; set; } = new List<Vehicle>(); 
+        public List<Person> PeopleInvolved { get; set; } = new List<Person>(); 
+        public List<Equipment> EquipmentUsed { get; set; } = new List<Equipment>(); 
 
         #endregion
 
-        #region Constructors         
+        #region Constructors                
         /// <summary>
         /// Initializes a new instance of the <see cref="Event"/> class.
         /// </summary>
-        /// <param name="id">The identifier.</param>
         /// <param name="type">The type.</param>
-        /// <param name="starEventDate">The star event date.</param>
+        /// <param name="address">The address.</param>
+        /// <param name="startEventDate">The start event date.</param>
         /// <param name="endEventDate">The end event date.</param>
         /// <param name="description">The description.</param>
         /// <param name="severityLevel">The severity level.</param>
         /// <param name="status">The status.</param>
-        public Event(int id, TypeEvent type, string address, DateTime starEventDate, DateTime endEventDate, string description, EventSeverityLevel severityLevel, StatusEvent status)
+        public Event( TypeEvent type, string address, DateTime startEventDate, DateTime endEventDate, string description, EventSeverityLevel severityLevel, StatusEvent status)
         {
-            Id = id;
             Type = type;
             Address = address;
-            StartEventDate = starEventDate;
+            StartEventDate = startEventDate;
             EndEventDate = endEventDate;
             Description = description;
             SeverityLevel = severityLevel;
             Status = status;
-            AssignedPersons = new List<Person>();
-            AssignedVehicles = new List<Vehicle>();
+           
         }
         #endregion
 
         #region Methods         
-        /// <summary>
-        /// Assigneds the persons.
-        /// </summary>
-        /// <param name="person">The person.</param>
-        void IEvent.AssignedPersons(Person person)
-        {
-            if (!AssignedPersons.Contains(person))
-            {
-                AssignedPersons.Add(person);
-            }
-        }
-        /// <summary>
-        /// Assigneds the vehicles.
-        /// </summary>
-        /// <param name="vehicle">The vehicle.</param>
-        void IEvent.AssignedVehicles(Vehicle vehicle)
-        {
-            if (AssignedVehicles.Contains(vehicle))
-            {
-                AssignedVehicles.Add(vehicle);
-            }
 
+        /// <summary>
+        /// Adds a team to the event.
+        /// </summary>
+        /// <param name="team">The team to be added.</param>
+        public void AddTeam(Team team)
+        {
+            TeamsInvolved.Add(team);
         }
-        
+
+        /// <summary>
+        /// Adds a vehicle to the event.
+        /// </summary>
+        /// <param name="vehicle">The vehicle to be added.</param>
+        public void AddVehicle(Vehicle vehicle)
+        {
+            VehiclesInvolved.Add(vehicle);
+        }
+
+        /// <summary>
+        /// Adds a person to the event.
+        /// </summary>
+        /// <param name="person">The person to be added.</param>
+        public void AddPerson(Person person)
+        {
+            PeopleInvolved.Add(person);
+        }
+
+        /// <summary>
+        /// Adds equipment to the event.
+        /// </summary>
+        /// <param name="equipment">The equipment to be added.</param>
+        public void AddEquipment(Equipment equipment)
+        {
+            EquipmentUsed.Add(equipment);
+        }
+
+        /// <summary>
+        /// Converts to string.
+        /// </summary>
+        /// <returns>
+        /// A <see cref="System.String" /> that represents this instance.
+        /// </returns>
+        public override string ToString()
+        {
+            return $"Id: {Id}\n" +
+                   $"Type: {Type}\n" +
+                   $"Address: {Address}\n" +
+                   $"Start Date: {StartEventDate}\n" +
+                   $"End Date: {EndEventDate}\n" +
+                   $"Description: {Description}\n" +
+                   $"Severity Level: {SeverityLevel}\n" +
+                   $"Status: {Status}\n" +
+                   $"Teams Involved: {string.Join(", ", TeamsInvolved.Select(t => t.Name))}\n" +
+                   $"Vehicles Involved: {string.Join(", ", VehiclesInvolved.Select(v => v.ToString()))}\n" +
+                   $"People Involved: {string.Join(", ", PeopleInvolved.Select(p => p.ToString()))}\n";
+        }
 
         #endregion
     }

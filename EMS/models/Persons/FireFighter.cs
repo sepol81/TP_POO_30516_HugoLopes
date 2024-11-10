@@ -32,13 +32,11 @@ namespace EMS.models.Persons
         /// <summary>
         /// Initializes a new instance of the <see cref="FireFighter"/> class.
         /// </summary>
-        /// <param name="Id">The identifier.</param>
         /// <param name="Name">The name.</param>
         /// <param name="CitCard">The cit card.</param>
         /// <param name="Profession">The profession.</param>
         /// <param name="Status">The status.</param>
         /// <param name="Birthday">The birthday.</param>
-        /// <param name="Age">The age.</param>
         /// <param name="Email">The email.</param>
         /// <param name="Phone">The phone.</param>
         /// <param name="Address">The address.</param>
@@ -46,9 +44,9 @@ namespace EMS.models.Persons
         /// <param name="YearsOfExp">The years of exp.</param>
         /// <param name="Certifications">The certifications.</param>
         /// <param name="Skills">The skills.</param>
-        public FireFighter(int Id, string Name, string CitCard,Profession Profession, StatusPerson Status, DateOnly Birthday, string Email, string Phone, string Address,
+        public FireFighter(string Name, string CitCard,Profession Profession, StatusPerson Status, DateOnly Birthday, string Email, string Phone, string Address,
             RankFireFighter Rank, int YearsOfExp, List<string> Certifications, List<string> Skills)
-            : base(Id, Name, CitCard, Profession, Status, Birthday, Email, Phone, Address)
+            : base( Name, CitCard, Profession, Status, Birthday, Email, Phone, Address)
         {
             this.Rank = Rank;
             this.YearsOfExp = YearsOfExp;

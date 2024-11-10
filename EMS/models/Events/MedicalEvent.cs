@@ -25,11 +25,10 @@ namespace EMS.models.Events
         public TypeOfEmergency TypeOfEmergency { get; set; }
         #endregion
 
-        #region Construters
+        #region Construters       
         /// <summary>
         /// Initializes a new instance of the <see cref="MedicalEvent"/> class.
         /// </summary>
-        /// <param name="id">The identifier.</param>
         /// <param name="type">The type.</param>
         /// <param name="address">The address.</param>
         /// <param name="startEventDate">The start event date.</param>
@@ -39,8 +38,8 @@ namespace EMS.models.Events
         /// <param name="status">The status.</param>
         /// <param name="numberOfVictims">The number of victims.</param>
         /// <param name="typeOfEmergency">The type of emergency.</param>
-        public MedicalEvent(int id, TypeEvent type, string address, DateTime startEventDate, DateTime endEventDate, string description, EventSeverityLevel severityLevel, StatusEvent status, int numberOfVictims,TypeOfEmergency typeOfEmergency)
-            : base(id, type, address, startEventDate, endEventDate, description, severityLevel, status)
+        public MedicalEvent( TypeEvent type, string address, DateTime startEventDate, DateTime endEventDate, string description, EventSeverityLevel severityLevel, StatusEvent status, int numberOfVictims,TypeOfEmergency typeOfEmergency)
+            : base(type, address, startEventDate, endEventDate, description, severityLevel, status)
         {
             NumberOfVictims = numberOfVictims;
             TypeOfEmergency = typeOfEmergency;

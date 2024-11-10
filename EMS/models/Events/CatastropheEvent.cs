@@ -31,11 +31,10 @@ namespace EMS.models.Events
         public int NumberOfVictims { get; set; }
         #endregion
 
-        #region Construters        
+        #region Construters               
         /// <summary>
         /// Initializes a new instance of the <see cref="CatastropheEvent"/> class.
         /// </summary>
-        /// <param name="id">The identifier.</param>
         /// <param name="type">The type.</param>
         /// <param name="address">The address.</param>
         /// <param name="startEventDate">The start event date.</param>
@@ -46,9 +45,10 @@ namespace EMS.models.Events
         /// <param name="AffectedArea">The affected area.</param>
         /// <param name="typeCat">The type cat.</param>
         /// <param name="numberOfVictims">The number of victims.</param>
-        public CatastropheEvent(int id,TypeEvent type, string address, DateTime startEventDate, DateTime endEventDate, string description,EventSeverityLevel severityLevel, StatusEvent status,double AffectedArea, TypeOfCatastrophe typeCat , int numberOfVictims)
-            : base(id, type, address, startEventDate, endEventDate, description, severityLevel, status)
+        public CatastropheEvent(TypeEvent type, string address, DateTime startEventDate, DateTime endEventDate, string description, EventSeverityLevel severityLevel, StatusEvent status,double affectedArea, TypeOfCatastrophe typeCat , int numberOfVictims)
+            : base( type, address, startEventDate, endEventDate, description, severityLevel, status)
         {
+            AffectedArea = affectedArea;
             TypeCat = typeCat;
             NumberOfVictims = numberOfVictims;
         }

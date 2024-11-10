@@ -9,13 +9,13 @@ namespace Utils
 {
     public class CalAge
     {
-            #region Public Methods
-            /// <summary>
-            /// Calculate Age base on date
-            /// </summary>
-            /// <param name="date"></param>
-            /// <returns></returns>
-            public int Age(DateOnly date)
+        #region Public Methods
+        /// <summary>
+        /// Calculate Age base on date
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public static int Age(DateOnly date)
             {
                 DateOnly today = DateOnly.FromDateTime(DateTime.Now);
                 int age = today.Year - date.Year;

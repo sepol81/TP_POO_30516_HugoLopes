@@ -7,6 +7,7 @@
  *                    and update person records.                                     *
  *-----------------------------------------------------------------------------------*/
 
+
 namespace EMS.models.Persons
 {
     /// <summary>
@@ -21,7 +22,7 @@ namespace EMS.models.Persons
         private List<Person> persons;
         #endregion
 
-        #region Costruters        
+        #region Construters        
         /// <summary>
         /// Initializes a new instance of the <see cref="PersonsManager"/> class.
         /// </summary>
@@ -40,6 +41,8 @@ namespace EMS.models.Persons
        
         
         public void UpdatePersons(Person person){}
+
+        public void GetAllPersons(Person person){}
         #endregion
     }
 }

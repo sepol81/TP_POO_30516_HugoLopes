@@ -32,26 +32,34 @@ namespace EMS.models
         public List<FireFighter> FireFighters { get; private set; }
         public List<Doctor> Doctors { get; private set; }
         public List<Nurse> Nurses { get; private set; }
-        public List<Vehicle> FireTrucks { get; private set; } 
+        public List<Paramedic> Paramedics { get; private set; }
+        public List<Patient> Patients { get; private set; }
+        public List<Vehicle> FireTrucks { get; private set; }
+        public List<Vehicle> Ambulance { get; private set; }
+        public List<Vehicle> MotorBike { get; private set; }
+        public List<Vehicle> Helicopter { get; private set; }
         public List<Equipment> Equipment { get; private set; }
         #endregion
 
-        #region Construters        
+        #region Construters                       
         /// <summary>
         /// Initializes a new instance of the <see cref="FireStation"/> class.
         /// </summary>
-        /// <param name="id">The identifier.</param>
         /// <param name="name">The name.</param>
         /// <param name="location">The location.</param>
-        public FireStation(int id, string name, string location)
+        public FireStation(string name, string location)
         {
-            Id = id;
+           
             Name = name;
             Location = location;
             FireFighters = new List<FireFighter>();
             Doctors = new List<Doctor>();
             Nurses = new List<Nurse>();
+            Patients = new List<Patient>();
             FireTrucks = new List<Vehicle>();
+            Ambulance = new List<Vehicle>();
+            MotorBike = new List<Vehicle>();
+            Helicopter = new List<Vehicle>();
             Equipment = new List<Equipment>();
         }
         #endregion
@@ -80,6 +88,21 @@ namespace EMS.models
         /// </summary>
         /// <param name="fireTruck">The fire truck.</param>
         public void AddFireTruck(Vehicle fireTruck){}
+        /// <summary>
+        /// Adds the ambulance.
+        /// </summary>
+        /// <param name="ambulance">The ambulance.</param>
+        public void AddAmbulance(Vehicle ambulance){}
+        /// <summary>
+        /// Adds the motor bike.
+        /// </summary>
+        /// <param name="motorBike">The motor bike.</param>
+        public void AddMotorBike(Vehicle motorBike){}
+        /// <summary>
+        /// Adds the helicopter.
+        /// </summary>
+        /// <param name="helicopter">The helicopter.</param>
+        public void AddHelicopter(Vehicle helicopter){}
 
         /// <summary>
         /// Adds the equipment.

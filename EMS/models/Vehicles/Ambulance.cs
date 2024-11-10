@@ -19,24 +19,24 @@ namespace EMS.models.Vehicles
         {
         #region Properties
         public int CrewCapacity { get; set; } // Capacidade de tripulação
-               
+
         #endregion
 
-        #region Construters
+        #region Construters       
         /// <summary>
         /// Initializes a new instance of the <see cref="Ambulance"/> class.
         /// </summary>
         /// <param name="CarRegist">The car regist.</param>
-        /// <param name="YearOfRegist"></param>
-        /// <param name="Age"></param>
+        /// <param name="YearOfRegist">The year of regist.</param>
         /// <param name="Type">The type.</param>
         /// <param name="Brand">The brand.</param>
         /// <param name="InspDate">The insp date.</param>
         /// <param name="Status">The status.</param>
-        public Ambulance(string CarRegist, DateOnly YearOfRegist, TypeVehicle Type, string Brand, DateOnly InspDate, StatusVehicle Status)
+        /// <param name="CrewCapacity">The crew capacity.</param>
+        public Ambulance(string CarRegist, DateOnly YearOfRegist, TypeVehicle Type, string Brand, DateOnly InspDate, StatusVehicle Status, int CrewCapacity)
            : base(CarRegist, YearOfRegist, Type, Brand, InspDate, Status)
         {
-            
+            this.CrewCapacity = CrewCapacity;
 
         }
 
@@ -56,8 +56,8 @@ namespace EMS.models.Vehicles
                     $"Type:{Type} \n" +
                     $"Brand: {Brand} \n" +
                     $"Inspetion Date: {InspDate} \n" +
-                    $"Status: {Status} \n";
-
+                    $"Status: {Status} \n"+
+                    $"Crew Capacity: {CrewCapacity} people\n";
         }
         #endregion
     }

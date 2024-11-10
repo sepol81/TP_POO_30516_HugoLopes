@@ -24,22 +24,22 @@ namespace EMS.models.Persons
 
         #endregion
 
-        #region Constructors              
+        #region Constructors                     
         /// <summary>
         /// Initializes a new instance of the <see cref="Doctor"/> class.
         /// </summary>
-        /// <param name="Id"></param>
-        /// <param name="Name"></param>
-        /// <param name="CitCard"></param>
-        /// <param name="Profession"></param>
-        /// <param name="Status"></param>
-        /// <param name="Birthday"></param>
-        /// <param name="Age"></param>
-        /// <param name="Email"></param>
-        /// <param name="Phone"></param>
-        /// <param name="Address"></param>
-        public Doctor(int Id, string Name, string CitCard,Profession Profession, StatusPerson Status, DateOnly Birthday, string Email, string Phone, string Address,string CardNumber,string Specialty)
-           : base(Id, Name, CitCard, Profession, Status, Birthday, Email, Phone, Address) 
+        /// <param name="Name">The name.</param>
+        /// <param name="CitCard">The cit card.</param>
+        /// <param name="Profession">The profession.</param>
+        /// <param name="Status">The status.</param>
+        /// <param name="Birthday">The birthday.</param>
+        /// <param name="Email">The email.</param>
+        /// <param name="Phone">The phone.</param>
+        /// <param name="Address">The address.</param>
+        /// <param name="CardNumber">The card number.</param>
+        /// <param name="Specialty">The specialty.</param>
+        public Doctor(string Name, string CitCard,Profession Profession, StatusPerson Status, DateOnly Birthday, string Email, string Phone, string Address,string CardNumber,string Specialty)
+           : base(Name, CitCard, Profession, Status, Birthday, Email, Phone, Address) 
         {
             this.CardNumber = CardNumber;
             this.Specialty = Specialty;

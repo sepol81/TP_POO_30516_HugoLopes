@@ -21,14 +21,19 @@ namespace EMS.models.Persons
         /// <value>
         /// The technical number.
         /// </value>
-        private string TechnicalNumber {  get; set; }
+        private string technicalNumber {  get; set; }
+
+        public string TechnicalNumber 
+        { 
+            get=> technicalNumber; 
+            set=> technicalNumber = value; 
+        }
         #endregion
 
-        #region Constructors                      
+        #region Constructors                              
         /// <summary>
         /// Initializes a new instance of the <see cref="Paramedic"/> class.
         /// </summary>
-        /// <param name="Id">The identifier.</param>
         /// <param name="Name">The name.</param>
         /// <param name="CitCard">The cit card.</param>
         /// <param name="Profession">The profession.</param>
@@ -38,8 +43,8 @@ namespace EMS.models.Persons
         /// <param name="Phone">The phone.</param>
         /// <param name="Address">The address.</param>
         /// <param name="TechnicalNumber">The technical number.</param>
-        public Paramedic(int Id, string Name, string CitCard, Profession Profession, StatusPerson Status, DateOnly Birthday, string Email, string Phone, string Address, string TechnicalNumber)
-          : base(Id, Name, CitCard, Profession, Status, Birthday, Email, Phone, Address)
+        public Paramedic(string Name, string CitCard, Profession Profession, StatusPerson Status, DateOnly Birthday, string Email, string Phone, string Address, string TechnicalNumber)
+          : base(Name, CitCard, Profession, Status, Birthday, Email, Phone, Address)
         {
             this.TechnicalNumber = TechnicalNumber;
         }

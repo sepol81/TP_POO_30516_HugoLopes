@@ -46,7 +46,7 @@ namespace EMS.models.Vehicles
             get => yearOfRegist;
             set => yearOfRegist = value;
         }
-        public int Age => ageCalculator.Age(YearOfRegist);
+        public int Age => CalAge.Age(YearOfRegist);
         public TypeVehicle Type
         {
             get => type;

@@ -25,25 +25,24 @@ namespace EMS.models.Events
             public TypeOfFire TypeOfFire { get; set; }
             public string FireIntensity { get; set; }
             public double AffectedArea { get; set; }
-            #endregion
+        #endregion
 
-            #region Construters        
-            /// <summary>
-            /// Initializes a new instance of the <see cref="FireEvent"/> class.
-            /// </summary>
-            /// <param name="id">The identifier.</param>
-            /// <param name="type">The type.</param>
-            /// <param name="address">The address.</param>
-            /// <param name="startEventDate">The start event date.</param>
-            /// <param name="endEventDate">The end event date.</param>
-            /// <param name="description">The description.</param>
-            /// <param name="severityLevel">The severity level.</param>
-            /// <param name="status">The status.</param>
-            /// <param name="typeOfFire">The type of fire.</param>
-            /// <param name="fireIntensity">The fire intensity.</param>
-            /// <param name="affectedArea">The affected area.</param>
-            public FireEvent(int id, TypeEvent type, string address, DateTime startEventDate, DateTime endEventDate, string description, EventSeverityLevel severityLevel, StatusEvent status,TypeOfFire typeOfFire, string fireIntensity, double affectedArea)
-                : base(id, type,address, startEventDate, endEventDate, description, severityLevel, status)
+        #region Construters                   
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FireEvent"/> class.
+        /// </summary>
+        /// <param name="type">The type.</param>
+        /// <param name="address">The address.</param>
+        /// <param name="startEventDate">The start event date.</param>
+        /// <param name="endEventDate">The end event date.</param>
+        /// <param name="description">The description.</param>
+        /// <param name="severityLevel">The severity level.</param>
+        /// <param name="status">The status.</param>
+        /// <param name="typeOfFire">The type of fire.</param>
+        /// <param name="fireIntensity">The fire intensity.</param>
+        /// <param name="affectedArea">The affected area.</param>
+        public FireEvent( TypeEvent type, string address, DateTime startEventDate, DateTime endEventDate, string description, EventSeverityLevel severityLevel, StatusEvent status,TypeOfFire typeOfFire, string fireIntensity, double affectedArea)
+                : base(type,address, startEventDate, endEventDate, description, severityLevel, status)
             {
                     {
                         TypeOfFire = typeOfFire;

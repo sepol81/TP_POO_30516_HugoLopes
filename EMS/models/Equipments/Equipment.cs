@@ -32,19 +32,18 @@ namespace EMS.models.Equiments
         public StatusEquipment Status { get; set; }
         #endregion
 
-        #region Constructors        
+        #region Constructors                
         /// <summary>
         /// Initializes a new instance of the <see cref="Equipment"/> class.
         /// </summary>
-        /// <param name="id">The identifier.</param>
         /// <param name="name">The name.</param>
         /// <param name="description">The description.</param>
         /// <param name="quantity">The quantity.</param>
         /// <param name="maintenanceDate">The maintenance date.</param>
         /// <param name="status">The status.</param>
-        public Equipment(int id, string name, string description, int quantity, DateOnly maintenanceDate, StatusEquipment status)
+        public Equipment(string name, string description, int quantity, DateOnly maintenanceDate, StatusEquipment status)
         {
-            Id = id;
+            
             Name = name;
             Description = description;
             Quantity = quantity;

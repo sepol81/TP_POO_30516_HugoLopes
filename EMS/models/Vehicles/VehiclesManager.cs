@@ -7,7 +7,7 @@
 
 namespace EMS.models.Vehicles
 {
-    internal class VehiclesManager
+    public class VehiclesManager
     {
         #region Properties
         /// <summary>

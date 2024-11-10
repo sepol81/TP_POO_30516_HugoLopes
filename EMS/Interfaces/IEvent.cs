@@ -1,11 +1,14 @@
 ﻿/*-----------------------------------------------------------------------------------*
- * File Name         : IEvent.cs                                                     *
- * Author            : Hugo Lopes                                                    *
- * Creation Date     : 26/10/2024                                                    *
- * Description       : Interface for managing emergency events, allowing assignment  *
- *                    of vehicles and persons to events.                             *
+ * File Name        : IEvent.cs                                                      *
+ * Author           : Hugo Lopes                                                     *
+ * Creation Date    : 26/10/2024                                                     *
+ * Description      : Interface for defining properties and actions related to       *
+ *                    emergency events. It includes event details such as type,      *
+ *                    address, dates, severity, and status, allowing for             *
+ *                    management and classification of various emergency types.      *
  *-----------------------------------------------------------------------------------*/
 
+using EMS.enums;
 using EMS.models.Persons;
 using EMS.models.Vehicles;
 
@@ -17,8 +20,13 @@ namespace EMS.interfaces
     /// </summary>
     public interface IEvent
     {
-        void AssignedVehicles(Vehicle vehicle);
-        void AssignedPersons(Person person);
+        public TypeEvent Type { get; set; }
+        public string Address { get; set; }
+        public DateTime StartEventDate { get; set; }
+        public DateTime EndEventDate { get; set; }
+        public string Description { get; set; }
+        public EventSeverityLevel SeverityLevel { get; set; }
+        public StatusEvent Status { get; set; }
 
 
     }
