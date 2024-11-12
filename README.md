@@ -16,7 +16,7 @@ Aluno n.º 30516
 
     
           
-         Emergency Management Services (EMS) 
+         Emergency Management System (EMS) 
      
          System developed in C# that allows recording occurrences of distress calls 
          and manage equipment and people to provide assistance.
