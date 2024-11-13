@@ -9,8 +9,7 @@
  *-----------------------------------------------------------------------------------*/
 
 using EMS.enums;
-using EMS.models.Persons;
-using EMS.models.Vehicles;
+
 
 
 namespace EMS.interfaces

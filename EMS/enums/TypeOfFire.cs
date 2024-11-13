@@ -17,5 +17,6 @@ namespace EMS.enums
         Classe_C, //Incêndios que envolvem equipamentos elétricos energizados, como painéis elétricos, fios e aparelhos. É importante notar que o equipamento deve estar ligado à rede elétrica para ser considerado um incêndio de Classe C.
         Classe_D, //Incêndios que envolvem metais combustíveis (também chamados de materiais pirofóricos), como magnésio, titânio, lítio, alumínio fragmentado, zircônio e potássio. Estes incêndios queimam em altas temperaturas.
         Classe_K, //Incêndios que ocorrem em óleos de cozinha e gorduras, comuns em cozinhas industriais e comerciais. Esta classe é específica para incêndios envolvendo equipamentos como fritadeiras, chapas, churrasqueiras e grelhas.
+        Outro
     }
 }
