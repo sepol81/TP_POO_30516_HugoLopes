@@ -14,18 +14,13 @@ using EMS.enums;
 namespace EMS.models.Events
 {
     /// <summary>
-    /// 
+    ///  Represents a specific catastrophe event
     /// </summary>
     /// <seealso cref="EMS.models.Events.Event" />
     public class CatastropheEvent : Event
     {
         #region Propreties
-        /// <summary>
-        /// Gets or sets the affected area.
-        /// </summary>
-        /// <value>
-        /// The affected area.
-        /// </value>
+        
         public double AffectedArea { get; set; }
         public TypeOfCatastrophe TypeCat { get; set; }
         public int NumberOfVictims { get; set; }

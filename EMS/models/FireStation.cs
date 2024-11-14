@@ -15,7 +15,9 @@ using EMS.models.Events;
 namespace EMS.models
 {
     /// <summary>
-    /// 
+    /// Represents a fire station within the EMS, 
+    /// managing resources such as personnel, vehicles, 
+    /// and equipment.
     /// </summary>
     public class FireStation
     {

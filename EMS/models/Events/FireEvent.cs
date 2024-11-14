@@ -12,16 +12,14 @@ using EMS.enums;
 
 namespace EMS.models.Events
 {
-       
-        public class FireEvent : Event
+    /// <summary>
+    /// Represents a specific fire event
+    /// </summary>
+    /// <seealso cref="EMS.models.Events.Event" />
+    public class FireEvent : Event
         {
             #region Properties
-            /// <summary>
-            /// Gets or sets the type of fire.
-            /// </summary>
-            /// <value>
-            /// The type of fire.
-            /// </value>
+            
             public TypeOfFire TypeOfFire { get; set; }
             public string FireIntensity { get; set; }
             public double AffectedArea { get; set; }

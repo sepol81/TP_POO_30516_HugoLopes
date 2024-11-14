@@ -12,7 +12,7 @@ using Utils;
 namespace EMS.models.Vehicles
 {
     /// <summary>
-    /// 
+    /// Represents a generic vehicle
     /// </summary>
     public abstract class Vehicle
     {

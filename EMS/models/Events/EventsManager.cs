@@ -10,14 +10,12 @@
 namespace EMS.models.Events
 {
     /// <summary>
-    /// 
+    /// Manages the collection of events within the emergency management system.
     /// </summary>
     public class EventsManager
     {
         #region Properties
-        /// <summary>
-        /// The events
-        /// </summary>
+        
         private List<Event> events;
         #endregion
 

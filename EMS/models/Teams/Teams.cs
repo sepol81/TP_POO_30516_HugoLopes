@@ -12,6 +12,9 @@ using EMS.models.Persons;
 
 namespace EMS.models.Teams
 {
+    /// <summary>
+    /// Represents a team within the EMS
+    /// </summary>
     public class Team
     {
         #region Properties        

@@ -7,12 +7,13 @@
 
 namespace EMS.models.Vehicles
 {
+    /// <summary>
+    /// Manages a collection of vehicles
+    /// </summary>
     public class VehiclesManager
     {
         #region Properties
-        /// <summary>
-        /// The vehicles
-        /// </summary>
+        
         private List<Vehicle> vehicles;
         #endregion
 

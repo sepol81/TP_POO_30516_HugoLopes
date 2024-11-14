@@ -24,8 +24,8 @@ namespace EMS
         /// <param name="args">The arguments.</param>
         static void Main(string[] args)
         {
-            using (var context = new EmergenciesDBContext())
-            {
+            //using (var context = new EmergenciesDBContext())
+            //{
                 #region Create FireFighter Object
                 FireFighter fireFighter = new FireFighter
                 (
@@ -43,7 +43,8 @@ namespace EMS
                     Certifications: new List<string> { "Certificação de Resgate", "Primeiros Socorros" },
                     Skills: new List<string> { "Combate a Incêndios", "Salvamento em Altura" }
                 );
-                context.FireFighters.Add(fireFighter);
+                //context.FireFighters.Add(fireFighter);
+                Console.WriteLine( fireFighter.TypePerson());
                 #endregion
 
                 #region Create Doctor Object
@@ -61,7 +62,8 @@ namespace EMS
                     CardNumber: "123015622",
                     Specialty: "Emergências"
                 );
-                context.Doctors.Add(doctor);
+                //context.Doctors.Add(doctor);
+                Console.WriteLine ( doctor.TypePerson() );
                 #endregion
 
                 #region Create Nurse Object
@@ -79,7 +81,8 @@ namespace EMS
                     CardNumber: "123456789",
                     AreaOfActivity: "pediatria"
                 );
-                context.Nurses.Add(nurse);
+                //context.Nurses.Add(nurse);
+                Console.WriteLine(nurse.TypePerson());
                 #endregion
 
                 #region Create Paramedic Object
@@ -96,7 +99,8 @@ namespace EMS
                     Address: "Évora",
                     TechnicalNumber: "1236958"
                 );
-                context.Paramedics.Add(paramedic);
+                //context.Paramedics.Add(paramedic);
+                Console.WriteLine(paramedic.TypePerson());
                 #endregion
 
                 #region Create FireTruck Object
@@ -111,7 +115,8 @@ namespace EMS
                     WaterTankCapacity: 3000,
                     CrewCapacity: 8
                 );
-                context.FireTrucks.Add(fireTruck);
+                //context.FireTrucks.Add(fireTruck);
+                Console.WriteLine( fireTruck.TypeVehicles() );
                 #endregion
 
                 #region Create Ambulance Object
@@ -125,7 +130,8 @@ namespace EMS
                     Status: StatusVehicle.EmServiço,
                     CrewCapacity: 4
                 );
-                context.Ambulances.Add(ambulance);
+                //context.Ambulances.Add(ambulance);
+                Console.WriteLine ( ambulance );
                 #endregion
 
                 #region Create MedicalEvent Object
@@ -142,7 +148,8 @@ namespace EMS
                     numberOfVictims: 3,
                     typeOfEmergency: TypeOfEmergency.Choque
                 );
-                context.Medical_Events.Add(medicalEvent);
+                //context.Medical_Events.Add(medicalEvent);
+                Console.WriteLine (medicalEvent);
                 #endregion
 
                 #region Create Equipment Object
@@ -155,14 +162,15 @@ namespace EMS
                     maintenanceDate: new DateOnly(2024, 05, 25),
                     status: StatusEquipment.Disponivel
                 );
-                context.Equipments.Add(equipment);
+                //context.Equipments.Add(equipment);
+                Console.WriteLine( equipment );
                 #endregion
 
                 // Salvar todas as alterações na base de dados
-                context.SaveChanges();
+                //context.SaveChanges();
 
-                Console.WriteLine("Objetos salvos na base de dados com sucesso.");
-            }
+                //Console.WriteLine("Objetos salvos na base de dados com sucesso.");
+            //}
         }
     }
 }

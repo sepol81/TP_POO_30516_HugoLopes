@@ -11,11 +11,11 @@ using EMS.models.Equiments;
 namespace EMS.models.Equiments
 {
     /// <summary>
-    /// 
+    /// Manages equipment and vehicles within the emergency management system.
     /// </summary>
     public class EquimentsManager 
     {
-        #region Properties        
+        #region Properties                
         
         private List<Equipment> equipmentList;
         private List<Vehicle> vehicles ;

@@ -12,6 +12,10 @@ using EMS.enums;
 
 namespace EMS.models.Persons
 {
+    /// <summary>
+    ///  Represents a paramedic in the emergency response system.
+    /// </summary>
+    /// <seealso cref="EMS.models.Persons.Person" />
     public class Paramedic : Person
     {
         #region Properties        

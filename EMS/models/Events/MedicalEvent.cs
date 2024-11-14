@@ -12,15 +12,14 @@ using EMS.enums;
 
 namespace EMS.models.Events
 {
+    /// <summary>
+    /// Represents a medical emergency event
+    /// </summary>
+    /// <seealso cref="EMS.models.Events.Event" />
     public class MedicalEvent : Event
     {
         #region Properties        
-        /// <summary>
-        /// Gets or sets the number of victims.
-        /// </summary>
-        /// <value>
-        /// The number of victims.
-        /// </value>
+        
         public int NumberOfVictims { get; set; }
         public TypeOfEmergency TypeOfEmergency { get; set; }
         #endregion
