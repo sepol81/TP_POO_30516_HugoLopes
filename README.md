@@ -6,7 +6,7 @@ Engenharia de Sistemas Informáticos(pós-laboral)  2024/25
 ***
 Trabalho Prático
 
-    Status: In progress
+    Status: Work in progress
 
 Programação Orientada a Objetos(POO)
    
