@@ -11,21 +11,21 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EMS.Migrations
 {
-    [DbContext(typeof(EmergenciesDBContext))]
-    [Migration("20241110193254_POO_EMS2")]
-    partial class POO_EMS2
+    [DbContext(typeof(EMS_DBContext))]
+    [Migration("20241216020240_EMS")]
+    partial class EMS
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.10")
+                .HasAnnotation("ProductVersion", "9.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("EMS.models.Equiments.Equipment", b =>
+            modelBuilder.Entity("EMS.models.Equipments.Equipment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,9 +36,6 @@ namespace EMS.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("EventId")
-                        .HasColumnType("int");
 
                     b.Property<int?>("FireStationId")
                         .HasColumnType("int");
@@ -58,8 +55,6 @@ namespace EMS.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EventId");
-
                     b.HasIndex("FireStationId");
 
                     b.ToTable("Equipments", (string)null);
@@ -69,7 +64,8 @@ namespace EMS.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
@@ -98,7 +94,7 @@ namespace EMS.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Events", (string)null);
+                    b.ToTable("Event", (string)null);
 
                     b.UseTptMappingStrategy();
                 });
@@ -147,9 +143,6 @@ namespace EMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("EventId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -169,8 +162,6 @@ namespace EMS.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EventId");
-
                     b.HasIndex("TeamId");
 
                     b.ToTable("Persons", (string)null);
@@ -186,9 +177,6 @@ namespace EMS.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("EventId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -201,8 +189,6 @@ namespace EMS.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EventId");
-
                     b.ToTable("Teams", (string)null);
                 });
 
@@ -214,9 +200,6 @@ namespace EMS.Migrations
                     b.Property<string>("Brand")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("EventId")
-                        .HasColumnType("int");
 
                     b.Property<int?>("FireStationId")
                         .HasColumnType("int");
@@ -244,8 +227,6 @@ namespace EMS.Migrations
 
                     b.HasKey("CarRegist");
 
-                    b.HasIndex("EventId");
-
                     b.HasIndex("FireStationId");
 
                     b.HasIndex("FireStationId1");
@@ -257,6 +238,75 @@ namespace EMS.Migrations
                     b.ToTable("Vehicles", (string)null);
 
                     b.UseTptMappingStrategy();
+                });
+
+            modelBuilder.Entity("EMS.services.User", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("UserId");
+
+                    b.HasIndex("UserName")
+                        .IsUnique();
+
+                    b.ToTable("Users", (string)null);
+                });
+
+            modelBuilder.Entity("EquipmentVehicle", b =>
+                {
+                    b.Property<int>("EquipmentsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("VehiclesCarRegist")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("EquipmentsId", "VehiclesCarRegist");
+
+                    b.HasIndex("VehiclesCarRegist");
+
+                    b.ToTable("EquipmentVehicle");
+                });
+
+            modelBuilder.Entity("EventTeam", b =>
+                {
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeamId")
+                        .HasColumnType("int");
+
+                    b.HasKey("EventId", "TeamId");
+
+                    b.HasIndex("TeamId");
+
+                    b.ToTable("EventTeam");
+                });
+
+            modelBuilder.Entity("EventVehicle", b =>
+                {
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("VehicleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("EventId", "VehicleId");
+
+                    b.HasIndex("VehicleId");
+
+                    b.ToTable("EventVehicle");
                 });
 
             modelBuilder.Entity("EMS.models.Events.CatastropheEvent", b =>
@@ -272,7 +322,7 @@ namespace EMS.Migrations
                     b.Property<int>("TypeCat")
                         .HasColumnType("int");
 
-                    b.ToTable("Catastrophe_Events", (string)null);
+                    b.ToTable("CatastropheEvent", (string)null);
                 });
 
             modelBuilder.Entity("EMS.models.Events.FireEvent", b =>
@@ -289,7 +339,7 @@ namespace EMS.Migrations
                     b.Property<int>("TypeOfFire")
                         .HasColumnType("int");
 
-                    b.ToTable("Fire_Events", (string)null);
+                    b.ToTable("FireEvent", (string)null);
                 });
 
             modelBuilder.Entity("EMS.models.Events.MedicalEvent", b =>
@@ -302,7 +352,7 @@ namespace EMS.Migrations
                     b.Property<int>("TypeOfEmergency")
                         .HasColumnType("int");
 
-                    b.ToTable("Medical_Events", (string)null);
+                    b.ToTable("MedicalEvent", (string)null);
                 });
 
             modelBuilder.Entity("EMS.models.Persons.Doctor", b =>
@@ -329,7 +379,7 @@ namespace EMS.Migrations
                 {
                     b.HasBaseType("EMS.models.Persons.Person");
 
-                    b.Property<string>("Certifications")
+                    b.PrimitiveCollection<string>("Certifications")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -339,7 +389,7 @@ namespace EMS.Migrations
                     b.Property<int>("Rank")
                         .HasColumnType("int");
 
-                    b.Property<string>("Skills")
+                    b.PrimitiveCollection<string>("Skills")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -468,12 +518,8 @@ namespace EMS.Migrations
                     b.ToTable("MotorBikes", (string)null);
                 });
 
-            modelBuilder.Entity("EMS.models.Equiments.Equipment", b =>
+            modelBuilder.Entity("EMS.models.Equipments.Equipment", b =>
                 {
-                    b.HasOne("EMS.models.Events.Event", null)
-                        .WithMany("EquipmentUsed")
-                        .HasForeignKey("EventId");
-
                     b.HasOne("EMS.models.FireStation", null)
                         .WithMany("Equipment")
                         .HasForeignKey("FireStationId");
@@ -481,28 +527,13 @@ namespace EMS.Migrations
 
             modelBuilder.Entity("EMS.models.Persons.Person", b =>
                 {
-                    b.HasOne("EMS.models.Events.Event", null)
-                        .WithMany("PeopleInvolved")
-                        .HasForeignKey("EventId");
-
                     b.HasOne("EMS.models.Teams.Team", null)
                         .WithMany("Members")
                         .HasForeignKey("TeamId");
                 });
 
-            modelBuilder.Entity("EMS.models.Teams.Team", b =>
-                {
-                    b.HasOne("EMS.models.Events.Event", null)
-                        .WithMany("TeamsInvolved")
-                        .HasForeignKey("EventId");
-                });
-
             modelBuilder.Entity("EMS.models.Vehicles.Vehicle", b =>
                 {
-                    b.HasOne("EMS.models.Events.Event", null)
-                        .WithMany("VehiclesInvolved")
-                        .HasForeignKey("EventId");
-
                     b.HasOne("EMS.models.FireStation", null)
                         .WithMany("Ambulance")
                         .HasForeignKey("FireStationId");
@@ -518,6 +549,51 @@ namespace EMS.Migrations
                     b.HasOne("EMS.models.FireStation", null)
                         .WithMany("MotorBike")
                         .HasForeignKey("FireStationId3");
+                });
+
+            modelBuilder.Entity("EquipmentVehicle", b =>
+                {
+                    b.HasOne("EMS.models.Equipments.Equipment", null)
+                        .WithMany()
+                        .HasForeignKey("EquipmentsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EMS.models.Vehicles.Vehicle", null)
+                        .WithMany()
+                        .HasForeignKey("VehiclesCarRegist")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("EventTeam", b =>
+                {
+                    b.HasOne("EMS.models.Events.Event", null)
+                        .WithMany()
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EMS.models.Teams.Team", null)
+                        .WithMany()
+                        .HasForeignKey("TeamId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("EventVehicle", b =>
+                {
+                    b.HasOne("EMS.models.Events.Event", null)
+                        .WithMany()
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EMS.models.Vehicles.Vehicle", null)
+                        .WithMany()
+                        .HasForeignKey("VehicleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("EMS.models.Events.CatastropheEvent", b =>
@@ -646,17 +722,6 @@ namespace EMS.Migrations
                         .HasForeignKey("EMS.models.Vehicles.MotorBike", "CarRegist")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("EMS.models.Events.Event", b =>
-                {
-                    b.Navigation("EquipmentUsed");
-
-                    b.Navigation("PeopleInvolved");
-
-                    b.Navigation("TeamsInvolved");
-
-                    b.Navigation("VehiclesInvolved");
                 });
 
             modelBuilder.Entity("EMS.models.FireStation", b =>

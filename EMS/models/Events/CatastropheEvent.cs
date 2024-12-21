@@ -10,6 +10,9 @@
  *-----------------------------------------------------------------------------------*/
 
 using EMS.enums;
+using EMS.models.Teams;
+using EMS.models.Vehicles;
+using System.Collections.Generic;
 
 namespace EMS.models.Events
 {
@@ -25,7 +28,7 @@ namespace EMS.models.Events
         public TypeOfCatastrophe TypeCat { get; set; }
         public int NumberOfVictims { get; set; }
         #endregion
-
+       
         #region Construters               
         /// <summary>
         /// Initializes a new instance of the <see cref="CatastropheEvent"/> class.
@@ -41,7 +44,7 @@ namespace EMS.models.Events
         /// <param name="typeCat">The type cat.</param>
         /// <param name="numberOfVictims">The number of victims.</param>
         public CatastropheEvent(TypeEvent type, string address, DateTime startEventDate, DateTime endEventDate, string description, EventSeverityLevel severityLevel, StatusEvent status,double affectedArea, TypeOfCatastrophe typeCat , int numberOfVictims)
-            : base( type, address, startEventDate, endEventDate, description, severityLevel, status)
+            : base(type, address, startEventDate, endEventDate, description, severityLevel, status)
         {
             AffectedArea = affectedArea;
             TypeCat = typeCat;
@@ -50,7 +53,7 @@ namespace EMS.models.Events
         #endregion
 
         #region Methods
-        public override string ToString()
+       /* public override string ToString()
         {
             return $"Id: {Id}\n" +
                     $"Type: {Type}\n" +
@@ -63,7 +66,7 @@ namespace EMS.models.Events
                     $"Type of Catatrophe:{TypeCat}\n" +
                     $"Number of Victimes: {NumberOfVictims}\n";
                     
-        }
+        }*/
         #endregion
     }
 }

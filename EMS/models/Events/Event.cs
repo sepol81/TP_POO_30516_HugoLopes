@@ -16,7 +16,7 @@ using EMS.models.Teams;
 using EMS.interfaces;
 using EMS.enums;
 using EMS.models.Teams;
-using EMS.models.Equiments;
+using EMS.models.Equipments;
 
 namespace EMS.models.Events
 {
@@ -36,14 +36,14 @@ namespace EMS.models.Events
         public string Description { get; set; }
         public EventSeverityLevel SeverityLevel { get; set; }
         public StatusEvent Status { get; set; }
-        public List<Team> TeamsInvolved { get; set; } = new List<Team>();  
-        public List<Vehicle> VehiclesInvolved { get; set; } = new List<Vehicle>(); 
-        public List<Person> PeopleInvolved { get; set; } = new List<Person>(); 
-        public List<Equipment> EquipmentUsed { get; set; } = new List<Equipment>(); 
+        public List<Team> TeamsInvolved { get; set; } = new List<Team>();
+        public List<Vehicle> VehiclesInvolved { get; set; } = new List<Vehicle>();
+
+
 
         #endregion
 
-        #region Constructors                
+        #region Constructors                        
         /// <summary>
         /// Initializes a new instance of the <see cref="Event"/> class.
         /// </summary>
@@ -54,6 +54,8 @@ namespace EMS.models.Events
         /// <param name="description">The description.</param>
         /// <param name="severityLevel">The severity level.</param>
         /// <param name="status">The status.</param>
+        /// <param name="teamsInvolved">The teams involved.</param>
+        /// <param name="vehiclesInvolved">The vehicles involved.</param>
         public Event( TypeEvent type, string address, DateTime startEventDate, DateTime endEventDate, string description, EventSeverityLevel severityLevel, StatusEvent status)
         {
             Type = type;
@@ -64,6 +66,7 @@ namespace EMS.models.Events
             SeverityLevel = severityLevel;
             Status = status;
            
+
         }
         #endregion
 
@@ -87,23 +90,9 @@ namespace EMS.models.Events
             VehiclesInvolved.Add(vehicle);
         }
 
-        /// <summary>
-        /// Adds a person to the event.
-        /// </summary>
-        /// <param name="person">The person to be added.</param>
-        public void AddPerson(Person person)
-        {
-            PeopleInvolved.Add(person);
-        }
+       
 
-        /// <summary>
-        /// Adds equipment to the event.
-        /// </summary>
-        /// <param name="equipment">The equipment to be added.</param>
-        public void AddEquipment(Equipment equipment)
-        {
-            EquipmentUsed.Add(equipment);
-        }
+        
 
         /// <summary>
         /// Converts to string.
@@ -122,8 +111,8 @@ namespace EMS.models.Events
                    $"Severity Level: {SeverityLevel}\n" +
                    $"Status: {Status}\n" +
                    $"Teams Involved: {string.Join(", ", TeamsInvolved.Select(t => t.Name))}\n" +
-                   $"Vehicles Involved: {string.Join(", ", VehiclesInvolved.Select(v => v.ToString()))}\n" +
-                   $"People Involved: {string.Join(", ", PeopleInvolved.Select(p => p.ToString()))}\n";
+                   $"Vehicles Involved: {string.Join(", ", VehiclesInvolved.Select(v => v.ToString()))}\n";
+                 
         }
 
         #endregion

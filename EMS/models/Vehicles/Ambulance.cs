@@ -8,6 +8,8 @@
  *-------------------------------------------------------------------------------------*/
 
 using EMS.enums;
+using EMS.models.Equipments;
+using EMS.models.Events;
 
 namespace EMS.models.Vehicles
 {
@@ -57,7 +59,7 @@ namespace EMS.models.Vehicles
                     $"Brand: {Brand} \n" +
                     $"Inspetion Date: {InspDate} \n" +
                     $"Status: {Status} \n"+
-                    $"Crew Capacity: {CrewCapacity} people\n";
+                    $"Crew Capacity: {CrewCapacity}\n";
         }
         #endregion
     }

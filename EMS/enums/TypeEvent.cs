@@ -14,7 +14,7 @@ namespace EMS.enums
     {
         Incêndio,
         Medical,
-        Catastrofes,
+        Catástrofe,
         Outro
     }
 }

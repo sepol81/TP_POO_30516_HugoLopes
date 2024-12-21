@@ -9,6 +9,8 @@
  *-----------------------------------------------------------------------------------*/
 
 using EMS.enums;
+using EMS.models.Teams;
+using EMS.models.Vehicles;
 
 
 
@@ -19,6 +21,7 @@ namespace EMS.interfaces
     /// </summary>
     public interface IEvent
     {
+
         public TypeEvent Type { get; set; }
         public string Address { get; set; }
         public DateTime StartEventDate { get; set; }
@@ -26,7 +29,8 @@ namespace EMS.interfaces
         public string Description { get; set; }
         public EventSeverityLevel SeverityLevel { get; set; }
         public StatusEvent Status { get; set; }
-
+        public List<Team> TeamsInvolved { get; set; } 
+        public List<Vehicle> VehiclesInvolved { get; set; }
 
     }
 }

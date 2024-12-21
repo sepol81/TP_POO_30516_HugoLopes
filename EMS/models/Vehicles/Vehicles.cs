@@ -7,6 +7,8 @@
  *-----------------------------------------------------------------------------------*/
 
 using EMS.enums;
+using EMS.models.Equipments;
+using EMS.models.Events;
 using Utils;
 
 namespace EMS.models.Vehicles
@@ -27,6 +29,7 @@ namespace EMS.models.Vehicles
         private string brand { get; set; }
         private DateOnly inspDate { get; set; }
         private StatusVehicle status { get; set; }
+        
         #endregion
 
         #region Public Properties        
@@ -67,19 +70,28 @@ namespace EMS.models.Vehicles
             get => status;
             set => status = value;
         }
+        /// <summary>
+        /// Equipments associated with the vehicle.
+        /// This is a many-to-many relationship with Equipment.
+        /// </summary>
+        public List<Equipment> Equipments { get; set; } = new List<Equipment>();
+        public List<Event> EventsInvolved { get; set; } = new List<Event>();
+
+
+        public Vehicle() { }
         #endregion
 
-        #region Constructors                      
+        #region Constructors                              
         /// <summary>
         /// Initializes a new instance of the <see cref="Vehicle"/> class.
         /// </summary>
         /// <param name="carRegist">The car regist.</param>
         /// <param name="yearOfRegist">The year of regist.</param>
-        /// <param name="Age">The age.</param>
         /// <param name="type">The type.</param>
         /// <param name="brand">The brand.</param>
         /// <param name="inspDate">The insp date.</param>
         /// <param name="status">The status.</param>
+        /// <param name="Equipments">The equipments.</param>
         public Vehicle(string carRegist,DateOnly yearOfRegist, TypeVehicle type, string brand, DateOnly inspDate, StatusVehicle status)
         {
             CarRegist = carRegist;
@@ -88,6 +100,8 @@ namespace EMS.models.Vehicles
             Brand = brand;
             InspDate = inspDate;
             Status = status;
+           
+         
         }
         #endregion
 

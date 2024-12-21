@@ -8,6 +8,8 @@
  *-----------------------------------------------------------------------------------*/
 
 using EMS.enums;
+using EMS.models.Equipments;
+using EMS.models.Events;
 
 namespace EMS.models.Vehicles
 {

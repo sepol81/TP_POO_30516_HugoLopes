@@ -51,7 +51,7 @@ namespace EMS.models.Persons
         #endregion
 
         #region Methods
-        public override string TypePerson()
+        /*public override string TypePerson()
         {
             return $"ID: {Id}\n" +
                     $"Name: {Name}\n" +
@@ -65,7 +65,7 @@ namespace EMS.models.Persons
                     $"Condition:  {Condition} \n"+
                     $"AdmissionDate: {AdmissionDate}\n";
 
-        }
+        }*/
          #endregion
     }
 }

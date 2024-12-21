@@ -48,6 +48,8 @@ namespace EMS.models.Persons
             RankFireFighter Rank, int YearsOfExp, List<string> Certifications, List<string> Skills)
             : base( Name, CitCard, Profession, Status, Birthday, Email, Phone, Address)
         {
+            if (string.IsNullOrEmpty(Name))
+                throw new ArgumentNullException(nameof(Name), "Name cannot be null or empty.");
             this.Rank = Rank;
             this.YearsOfExp = YearsOfExp;
             this.Certifications = Certifications;
@@ -64,7 +66,7 @@ namespace EMS.models.Persons
         /// <returns>
         /// A string representing the specific type of person.
         /// </returns>
-        public override string TypePerson()
+        /*public override string TypePerson()
         {
             return  $"ID: {Id}\n" +
                     $"Name: {Name}\n" +
@@ -80,7 +82,7 @@ namespace EMS.models.Persons
                     $"Years of exerience: {YearsOfExp}\n" +
                     $"Certifications: {string.Join(", ", Certifications)}\n" +
                     $"Special Skills: {string.Join(", ", Skills)}\n";
-        }
+        }*/
 
         #endregion
     }

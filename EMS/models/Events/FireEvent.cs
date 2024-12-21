@@ -9,6 +9,9 @@
  *-----------------------------------------------------------------------------------*/
 
 using EMS.enums;
+using EMS.models.Teams;
+using EMS.models.Vehicles;
+using System.Collections.Generic;
 
 namespace EMS.models.Events
 {
@@ -39,19 +42,20 @@ namespace EMS.models.Events
         /// <param name="typeOfFire">The type of fire.</param>
         /// <param name="fireIntensity">The fire intensity.</param>
         /// <param name="affectedArea">The affected area.</param>
-        public FireEvent( TypeEvent type, string address, DateTime startEventDate, DateTime endEventDate, string description, EventSeverityLevel severityLevel, StatusEvent status,TypeOfFire typeOfFire, string fireIntensity, double affectedArea)
-                : base(type,address, startEventDate, endEventDate, description, severityLevel, status)
+        public FireEvent(TypeEvent type, string address, DateTime startEventDate, DateTime endEventDate, string description, EventSeverityLevel severityLevel, StatusEvent status, TypeOfFire typeOfFire, string fireIntensity, double affectedArea)
+                : base(type, address, startEventDate, endEventDate, description, severityLevel, status)
             {
                     {
                         TypeOfFire = typeOfFire;
                         FireIntensity = fireIntensity;
                         AffectedArea = affectedArea;
+
                     }
             }
             #endregion
 
             #region Methods
-            public override string ToString()
+            /*public override string ToString()
             {
                 return $"Id: {Id}\n" +
                     $"Type: {Type}\n" +
@@ -64,7 +68,7 @@ namespace EMS.models.Events
                     $"Type Of Fire: {TypeOfFire}\n" +
                     $"Fire Intensity: {FireIntensity}\n" +
                     $"Affected Area: {AffectedArea}\n";
-            }
+            }*/
             #endregion
         }
 }

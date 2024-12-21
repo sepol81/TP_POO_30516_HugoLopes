@@ -9,6 +9,9 @@
  *-----------------------------------------------------------------------------------*/
 
 using EMS.enums;
+using EMS.models.Teams;
+using EMS.models.Vehicles;
+using System.Collections.Generic;
 
 namespace EMS.models.Events
 {
@@ -22,6 +25,7 @@ namespace EMS.models.Events
         
         public int NumberOfVictims { get; set; }
         public TypeOfEmergency TypeOfEmergency { get; set; }
+
         #endregion
 
         #region Construters       
@@ -37,7 +41,7 @@ namespace EMS.models.Events
         /// <param name="status">The status.</param>
         /// <param name="numberOfVictims">The number of victims.</param>
         /// <param name="typeOfEmergency">The type of emergency.</param>
-        public MedicalEvent( TypeEvent type, string address, DateTime startEventDate, DateTime endEventDate, string description, EventSeverityLevel severityLevel, StatusEvent status, int numberOfVictims,TypeOfEmergency typeOfEmergency)
+        public MedicalEvent( TypeEvent type, string address, DateTime startEventDate, DateTime endEventDate, string description, EventSeverityLevel severityLevel, StatusEvent status,  int numberOfVictims,TypeOfEmergency typeOfEmergency)
             : base(type, address, startEventDate, endEventDate, description, severityLevel, status)
         {
             NumberOfVictims = numberOfVictims;
@@ -53,7 +57,7 @@ namespace EMS.models.Events
         /// <returns>
         /// A <see cref="System.String" /> that represents this instance.
         /// </returns>
-        public override string ToString()
+        /*public override string ToString()
         {
             return  $"Id: {Id}\n" +
                     $"Type: {Type}\n" +
@@ -67,7 +71,7 @@ namespace EMS.models.Events
                     $"Type of Emergency: {TypeOfEmergency}\n";
                     
                    
-        }
+        }*/
         #endregion
 
     }

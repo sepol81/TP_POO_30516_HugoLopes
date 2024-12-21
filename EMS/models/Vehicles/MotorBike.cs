@@ -7,6 +7,9 @@
  *-----------------------------------------------------------------------------------*/
 
 using EMS.enums;
+using EMS.models.Equipments;
+using EMS.models.Events;
+using System.Collections.Generic;
 
 namespace EMS.models.Vehicles
 {

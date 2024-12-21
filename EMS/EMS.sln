@@ -4,7 +4,11 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS", "EMS.csproj", "{CA3FFFF2-CEE8-42F7-AE87-E3E7B12E4C80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "..\Utils\Utils.csproj", "{CCD2269E-77E2-485D-9D83-0C2B3F0667DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "..\Utils\Utils.csproj", "{CCD2269E-77E2-485D-9D83-0C2B3F0667DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS_AP", "..\EMS_AP\EMS_AP.csproj", "{30F0F1C5-DDC0-4481-A637-92BF31B9E3F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMS_Test", "..\Ems_Test\EMS_Test.csproj", "{27FC3DD2-91E6-46A1-AD14-AD544A66EAE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +24,14 @@ Global
 		{CCD2269E-77E2-485D-9D83-0C2B3F0667DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCD2269E-77E2-485D-9D83-0C2B3F0667DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCD2269E-77E2-485D-9D83-0C2B3F0667DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30F0F1C5-DDC0-4481-A637-92BF31B9E3F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30F0F1C5-DDC0-4481-A637-92BF31B9E3F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30F0F1C5-DDC0-4481-A637-92BF31B9E3F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30F0F1C5-DDC0-4481-A637-92BF31B9E3F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27FC3DD2-91E6-46A1-AD14-AD544A66EAE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27FC3DD2-91E6-46A1-AD14-AD544A66EAE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27FC3DD2-91E6-46A1-AD14-AD544A66EAE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27FC3DD2-91E6-46A1-AD14-AD544A66EAE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

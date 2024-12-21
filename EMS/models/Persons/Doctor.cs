@@ -55,7 +55,7 @@ namespace EMS.models.Persons
         /// <returns>
         /// A string representing the specific type of person.
         /// </returns>
-        public override string TypePerson()
+        /*public override string TypePerson()
         {
             return $"ID: {Id}\n" +
                     $"Name: {Name}\n" +
@@ -69,7 +69,7 @@ namespace EMS.models.Persons
                     $"Address: {Address}  \n" +
                     $"Card Number: {CardNumber}\n" +
                     $"Speciality: {Specialty}\n";
-        }
+        }*/
 
         #endregion
     }

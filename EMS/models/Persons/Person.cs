@@ -138,7 +138,7 @@ namespace EMS.models.Persons
         /// It defines the type of person (doctor, nurse, firefighter).
         /// </summary>
         /// <returns>A string representing the specific type of person.</returns>
-        public abstract string TypePerson();
+        //public abstract string TypePerson();
 
        
 

@@ -8,8 +8,9 @@
  *-----------------------------------------------------------------------------------*/
 
 using EMS.enums;
+using EMS.models.Vehicles;
 
-namespace EMS.models.Equiments
+namespace EMS.models.Equipments
 {
         
     /// <summary>
@@ -30,6 +31,9 @@ namespace EMS.models.Equiments
         public int Quantity { get; set; }
         public DateOnly MaintenanceDate { get; set; }
         public StatusEquipment Status { get; set; }
+        
+        // Many-to-Many relationship with Vehicle
+        public virtual ICollection<Vehicle> Vehicles { get; set; } = new List<Vehicle>();
         #endregion
 
         #region Constructors                

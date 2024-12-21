@@ -9,8 +9,10 @@
 
 using EMS.models.Persons;
 using EMS.models.Vehicles;
-using EMS.models.Equiments;
+using EMS.models.Equipments;
 using EMS.models.Events;
+using Microsoft.EntityFrameworkCore;
+using EMS.Data;
 
 namespace EMS.models
 {
@@ -22,12 +24,7 @@ namespace EMS.models
     public class FireStation
     {
         #region Propreties        
-        /// <summary>
-        /// Gets the identifier.
-        /// </summary>
-        /// <value>
-        /// The identifier.
-        /// </value>
+        private readonly EMS_DBContext _DBContext;
         public int Id { get; private set; }
         public string Name { get; set; }
         public string Location { get; set; } 
@@ -49,9 +46,9 @@ namespace EMS.models
         /// </summary>
         /// <param name="name">The name.</param>
         /// <param name="location">The location.</param>
-        public FireStation(string name, string location)
+        public FireStation(string name, string location,EMS_DBContext _dbContext)
         {
-           
+            _DBContext = _dbContext;
             Name = name;
             Location = location;
             FireFighters = new List<FireFighter>();
