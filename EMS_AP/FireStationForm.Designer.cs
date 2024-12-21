@@ -38,6 +38,8 @@
             button10 = new Button();
             panel1 = new Panel();
             panel2 = new Panel();
+            label1 = new Label();
+            EMS = new Label();
             panel3 = new Panel();
             panel4 = new Panel();
             panel5 = new Panel();
@@ -180,7 +182,6 @@
             button7.TabIndex = 10;
             button7.Text = "Ocorrências a decorrer";
             button7.UseVisualStyleBackColor = true;
-           
             // 
             // button8
             // 
@@ -222,7 +223,9 @@
             // 
             panel1.AutoSize = true;
             panel1.BackColor = Color.DarkCyan;
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(button5);
+            panel1.Controls.Add(EMS);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
@@ -240,13 +243,35 @@
             panel2.Size = new Size(1404, 92);
             panel2.TabIndex = 17;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DarkRed;
+            label1.Location = new Point(12, 171);
+            label1.Name = "label1";
+            label1.Size = new Size(228, 17);
+            label1.TabIndex = 6;
+            label1.Text = "EMERGENCY MANAGEMENT SYSTEM";
+            // 
+            // EMS
+            // 
+            EMS.AutoSize = true;
+            EMS.Font = new Font("MS Gothic", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EMS.ForeColor = Color.DarkRed;
+            EMS.Location = new Point(72, 111);
+            EMS.Name = "EMS";
+            EMS.Size = new Size(95, 47);
+            EMS.TabIndex = 5;
+            EMS.Text = "EMS";
+            // 
             // panel3
             // 
             panel3.AutoSize = true;
             panel3.BackColor = Color.DarkRed;
-            panel3.Location = new Point(254, 88);
+            panel3.Location = new Point(259, 88);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1150, 99);
+            panel3.Size = new Size(1145, 99);
             panel3.TabIndex = 18;
             // 
             // panel4
@@ -282,13 +307,14 @@
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel2);
-            Controls.Add(panel1);
             Controls.Add(panel3);
+            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FireStationForm";
             StartPosition = FormStartPosition.CenterScreen;
             Load += FireStationForm_Load;
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panel4.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -312,5 +338,7 @@
         private Panel panel3;
         private Panel panel4;
         private Panel panel5;
+        private Label EMS;
+        private Label label1;
     }
 }

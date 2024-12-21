@@ -63,6 +63,16 @@ namespace EMS_AP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EMS_logo {
+            get {
+                object obj = ResourceManager.GetObject("EMS_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ges_pro {
             get {
                 object obj = ResourceManager.GetObject("Ges_pro", resourceCulture);

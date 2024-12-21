@@ -143,5 +143,10 @@ namespace EMS_AP
         }
 
         #endregion
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

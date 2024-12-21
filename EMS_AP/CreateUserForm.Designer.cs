@@ -34,6 +34,8 @@
             btnCancel = new Button();
             panel2 = new Panel();
             panel1 = new Panel();
+            label1 = new Label();
+            EMS = new Label();
             SuspendLayout();
             // 
             // txtUsername
@@ -94,6 +96,28 @@
             panel1.Size = new Size(60, 616);
             panel1.TabIndex = 7;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DarkRed;
+            label1.Location = new Point(96, 177);
+            label1.Name = "label1";
+            label1.Size = new Size(228, 17);
+            label1.TabIndex = 10;
+            label1.Text = "EMERGENCY MANAGEMENT SYSTEM";
+            // 
+            // EMS
+            // 
+            EMS.AutoSize = true;
+            EMS.Font = new Font("MS Gothic", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EMS.ForeColor = Color.DarkRed;
+            EMS.Location = new Point(156, 117);
+            EMS.Name = "EMS";
+            EMS.Size = new Size(95, 47);
+            EMS.TabIndex = 9;
+            EMS.Text = "EMS";
+            // 
             // CreateUserForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -101,6 +125,8 @@
             BackColor = Color.DarkCyan;
             ClientSize = new Size(478, 612);
             ControlBox = false;
+            Controls.Add(label1);
+            Controls.Add(EMS);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(btnCancel);
@@ -110,7 +136,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "CreateUserForm";
             StartPosition = FormStartPosition.CenterScreen;
-         
             ResumeLayout(false);
             PerformLayout();
         }
@@ -123,5 +148,7 @@
         private Button btnCancel;
         private Panel panel2;
         private Panel panel1;
+        private Label label1;
+        private Label EMS;
     }
 }

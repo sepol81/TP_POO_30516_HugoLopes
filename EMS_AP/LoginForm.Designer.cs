@@ -35,6 +35,8 @@
             Button_CreateUser = new Button();
             panel1 = new Panel();
             panel2 = new Panel();
+            label1 = new Label();
+            EMS = new Label();
             SuspendLayout();
             // 
             // txt_password
@@ -115,6 +117,28 @@
             panel2.Size = new Size(420, 56);
             panel2.TabIndex = 6;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DarkRed;
+            label1.Location = new Point(102, 177);
+            label1.Name = "label1";
+            label1.Size = new Size(228, 17);
+            label1.TabIndex = 8;
+            label1.Text = "EMERGENCY MANAGEMENT SYSTEM";
+            // 
+            // EMS
+            // 
+            EMS.AutoSize = true;
+            EMS.Font = new Font("MS Gothic", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EMS.ForeColor = Color.DarkRed;
+            EMS.Location = new Point(162, 117);
+            EMS.Name = "EMS";
+            EMS.Size = new Size(95, 47);
+            EMS.TabIndex = 7;
+            EMS.Text = "EMS";
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -122,6 +146,8 @@
             BackColor = Color.DarkCyan;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(478, 612);
+            Controls.Add(label1);
+            Controls.Add(EMS);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(Button_CreateUser);
@@ -145,5 +171,7 @@
         private Button Button_CreateUser;
         private Panel panel1;
         private Panel panel2;
+        private Label label1;
+        private Label EMS;
     }
 }
